@@ -1,0 +1,23 @@
+name: 🚀 Deploy website on push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  web-deploy:
+    name: 🎉 FTP Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+      - name: Remove unused files
+        run: rm -rf src
+        run: rm .gitignore package-lock.json package.json tailwind.config.js
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.server }}
+          username: ${{ secrets.user }}
+          password: ${{ secrets.pass }}
+          server-dir: ${{ secrets.dir }}

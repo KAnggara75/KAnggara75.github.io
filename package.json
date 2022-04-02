@@ -1,0 +1,24 @@
+{
+	"name": "kanggara75.github.io",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch --minify",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KAnggara75/KAnggara75.github.io.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/KAnggara75/KAnggara75.github.io/issues"
+	},
+	"homepage": "https://github.com/KAnggara75/KAnggara75.github.io#readme",
+	"devDependencies": {
+		"tailwindcss": "^3.0.23"
+	}
+}

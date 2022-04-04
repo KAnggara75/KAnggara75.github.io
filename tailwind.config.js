@@ -14,10 +14,10 @@ module.exports = {
 				mysql: "#4479A1",
 				mongo: "#47A248",
 				dark: "#0f172a",
+				node: "#339933",
 				html: "#E34F26",
 				php: "#777BB4",
 				css: "#1572B6",
-				node: "#339933",
 			},
 			screen: {
 				"2xl": "1320px",

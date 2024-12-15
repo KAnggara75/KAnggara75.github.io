@@ -7,12 +7,10 @@ title=$(curl -s "$base_url" | grep -o '<script[^>]*>[^<]*</script>' | sed 's/\<s
 
 style=$(curl -s "$base_url" | grep -o '<link[^>]*.css">' | sed 's/\<link.*href="\(.*\)".*/\1/')
 
-if [ ! -f dist/$title ]; then
+if [ ! -f dist$title ]; then
     echo "$title Not Deployed"
 fi
 
-echo $style
-
-if [ ! -f dist/$style ]; then
+if [ ! -f dist$style ]; then
     echo "$style Not Deployed"
 fi

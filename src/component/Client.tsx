@@ -22,28 +22,28 @@ export default function Client() {
 					<div className="flex flex-wrap items-center justify-center">
 						<a href="#">
 							<img
-								src="dist/img/hero.png"
+								src="img/hero.png"
 								alt="WA"
 								className="max-w-[120px] mx-4 py-4 grayscale transition duration-500 opacity-60 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
 							/>
 						</a>
 						<a href="#">
 							<img
-								src="dist/img/hero.png"
+								src="img/hero.png"
 								alt="WA"
 								className="max-w-[120px] mx-4 py-4 grayscale transition duration-500 opacity-60 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
 							/>
 						</a>
 						<a href="#">
 							<img
-								src="dist/img/hero.png"
+								src="img/hero.png"
 								alt="WA"
 								className="max-w-[120px] mx-4 py-4 grayscale transition duration-500 opacity-60 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
 							/>
 						</a>
 						<a href="#">
 							<img
-								src="dist/img/hero.png"
+								src="img/hero.png"
 								alt="WA"
 								className="max-w-[120px] mx-4 py-4 grayscale transition duration-500 opacity-60 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
 							/>

@@ -23,7 +23,7 @@ export default function Portofolio() {
 					<div className="mb-12 p-4 md:w-1/2">
 						<div className="rounded-md shadow-md overflow-hidden">
 							<img
-								src="dist/img/porto/p1.jpeg"
+								src="img/porto/p1.jpeg"
 								alt="Landing Page"
 								width="w-full"
 							/>
@@ -36,7 +36,7 @@ export default function Portofolio() {
 								<svg
 									className="fill-current"
 									width="15px"
-									role="img"
+									// role="img"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -48,7 +48,7 @@ export default function Portofolio() {
 								<svg
 									className="fill-current"
 									width="15px"
-									role="img"
+									// role="img"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -89,7 +89,7 @@ export default function Portofolio() {
 					<div className="mb-12 p-4 md:w-1/2">
 						<div className="rounded-md shadow-md overflow-hidden">
 							<img
-								src="dist/img/porto/p2.jpeg"
+								src="img/porto/p2.jpeg"
 								alt="E-Commerce"
 								width="w-full"
 							/>
@@ -155,7 +155,7 @@ export default function Portofolio() {
 					<div className="mb-12 p-4 md:w-1/2">
 						<div className="rounded-md shadow-md overflow-hidden">
 							<img
-								src="dist/img/porto/p3.jpeg"
+								src="img/porto/p3.jpeg"
 								alt="Technical Documentation"
 								width="w-full"
 							/>
@@ -221,7 +221,7 @@ export default function Portofolio() {
 					<div className="mb-12 p-4 md:w-1/2">
 						<div className="rounded-md shadow-md overflow-hidden">
 							<img
-								src="dist/img/porto/p4.jpeg"
+								src="img/porto/p4.jpeg"
 								alt="Tribute Page"
 								width="w-full"
 							/>

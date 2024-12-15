@@ -10,7 +10,7 @@ export default function Hero() {
 						<h1 className="text-base font-semibold text-primary md:text-xl">
 							Hallo Semuanya,
 							<img
-								src="dist/img/hi.gif"
+								src="img/hi.gif"
 								alt="hi"
 								width="20px"
 								className="inline-block"
@@ -38,7 +38,7 @@ export default function Hero() {
 					<div className="w-full self-end px-4 lg:w-1/2">
 						<div className="mt-10 relative lg:mt-0 lg:right-0">
 							<img
-								src="dist/img/hero.png"
+								src="img/hero.png"
 								alt="Kelvin"
 								className="max-w-full mx-auto"
 							/>

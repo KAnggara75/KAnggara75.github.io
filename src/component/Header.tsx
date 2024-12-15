@@ -1,4 +1,25 @@
+import { useEffect } from "react";
+
 export default function Header() {
+	// Sticky Menu Area
+	useEffect(() => {
+		window.addEventListener("scroll", isSticky);
+		return () => {
+			window.removeEventListener("scroll", isSticky);
+		};
+	});
+
+	/* Method that will fix header after a specific scrollable */
+	const isSticky = () => {
+		const header = document.querySelector("header");
+
+		if (window.scrollY > header!.offsetTop) {
+			header!.classList.add("navbar-fixed");
+		} else {
+			header!.classList.remove("navbar-fixed");
+		}
+	};
+
 	return (
 		<header className="bg-transparent absolute mt-0 left-0 w-full flex items-center z-10">
 			<div className="container">

@@ -20,6 +20,13 @@ export default function Header() {
 		}
 	};
 
+	const hamburger = () => {
+		const hamburger = document.querySelector("#hamburger");
+		const navMenu = document.querySelector("#nav-menu");
+		hamburger!.classList.toggle("hamburger-active");
+		navMenu!.classList.toggle("hidden");
+	};
+
 	return (
 		<header className="bg-transparent absolute mt-0 left-0 w-full flex items-center z-10">
 			<div className="container">
@@ -37,6 +44,7 @@ export default function Header() {
 							id="hamburger"
 							name="humberger"
 							type="button"
+							onClick={hamburger}
 							className="absolute flex items-center right-4 lg:invisible"
 						>
 							<div className="w-8 flex items-center justify-center relative">

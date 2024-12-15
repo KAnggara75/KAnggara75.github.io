@@ -21,7 +21,6 @@
 		"build": "tsc -b && vite build",
 		"fc": "pnpm prettier --write . && pnpm eslint --fix . && pnpm prettier --check . && pnpm eslint .",
 		"lint": "eslint .",
-		"devv": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch --minify",
 		"preview": "vite preview"
 	},
 	"dependencies": {

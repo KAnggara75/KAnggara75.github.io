@@ -50,4 +50,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Test deployed file
-        run: ./test.sh
+        run: pwd && ls -ls && ./test.sh

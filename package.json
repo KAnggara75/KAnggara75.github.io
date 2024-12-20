@@ -26,6 +26,8 @@
 	"dependencies": {
 		"@react-router/node": "^7.0.2",
 		"@react-router/serve": "^7.0.2",
+		"glob": "^11.0.0",
+		"path": "^0.12.7",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-markdown": "^9.0.1",
@@ -35,6 +37,7 @@
 	"devDependencies": {
 		"@eslint/js": "^9.17.0",
 		"@react-router/dev": "^7.0.2",
+		"@types/node": "^22.10.2",
 		"@types/react": "^19.0.1",
 		"@types/react-dom": "^19.0.2",
 		"@types/react-router-dom": "^5.3.3",

@@ -1,0 +1,4 @@
+http://kanggara.my.id/
+http://kanggara.my.id/?/example
+http://kanggara.my.id/?/example/two-deep&field1=foo~and~field2=bar#boom!
+http://kanggara.my.id/?/sitemap-link-generator

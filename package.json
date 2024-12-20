@@ -15,7 +15,7 @@
 	"bugs": {
 		"url": "https://github.com/KAnggara75/KAnggara75.github.io/issues"
 	},
-	"homepage": "https://github.com/KAnggara75/KAnggara75.github.io#readme",
+	"homepage": "https://kanggara.my.id",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",

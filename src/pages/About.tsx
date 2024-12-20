@@ -1,12 +1,5 @@
-import Header from "../component/Header";
+import Blog from "../component/Blog";
 
 export default function About() {
-	return (
-		<>
-			<Header />
-			<div className="bg-red-500">
-				<div className="container"></div>
-			</div>
-		</>
-	);
+	return <Blog />;
 }

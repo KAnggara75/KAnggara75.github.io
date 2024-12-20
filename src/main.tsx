@@ -1,23 +1,25 @@
-// import { StrictMode } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { createHashRouter, RouterProvider } from "react-router";
+import Header from "./component/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
-// createRoot(document.getElementById("root")!).render(<StrictMode></StrictMode>);
+const router = createHashRouter([
+	{
+		path: "/",
+		element: <Home />,
+	},
+	{
+		path: "#/about",
+		element: <About />,
+	},
+]);
 
 createRoot(document.getElementById("root")!).render(
-	<BrowserRouter>
-		<Routes>
-			<Route
-				path="/"
-				element={<Home />}
-			/>
-			<Route
-				path="/about"
-				element={<About />}
-			/>
-		</Routes>
-	</BrowserRouter>
+	<StrictMode>
+		<Header />
+		<RouterProvider router={router} />
+	</StrictMode>
 );

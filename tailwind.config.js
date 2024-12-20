@@ -1,9 +1,7 @@
 export default {
 	content: [
-		"./blog.html",
+		"./404.html",
 		"./index.html",
-		"./about.html",
-		"./portfolio.html",
 		"./src/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {

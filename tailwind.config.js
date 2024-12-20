@@ -1,9 +1,5 @@
 export default {
-	content: [
-		"./404.html",
-		"./index.html",
-		"./src/**/*.{js,ts,jsx,tsx}",
-	],
+	content: ["./404.html", "./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		container: {
 			center: true,

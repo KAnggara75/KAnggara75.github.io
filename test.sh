@@ -1,16 +1,14 @@
 #!/bin/bash
 
 # Define the URL to scrape
-base_url="https://kanggara.my.id/"
-
-title=$(curl -s "$base_url" | grep -o '<script[^>]*>[^<]*</script>' | sed 's/\<script.*src="\(.*\)".*/\1/')
+title=$(curl -s "$base_url" | grep -o '<script[^>]*>[^<]*</script>' | sed 's/\<script.*src="\(.*\)".*/\1/' |  sed "s/\<$temp\>//g")
 
 style=$(curl -s "$base_url" | grep -o '<link[^>]*.css">' | sed 's/\<link.*href="\(.*\)".*/\1/')
 
-if [ ! -f dist$title ]; then
+if [ ! -f dist/assets/$title ]; then
     echo "$title Not Deployed"
 fi
 
-if [ ! -f dist$style ]; then
+if [ ! -f dist/assets/$style ]; then
     echo "$style Not Deployed"
 fi

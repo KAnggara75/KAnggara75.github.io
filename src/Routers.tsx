@@ -10,10 +10,6 @@ export default function Routers() {
 			<Header />
 			<Routes>
 				<Route
-					path="*"
-					element={<Home />}
-				/>
-				<Route
 					index
 					path="/"
 					element={<Home />}

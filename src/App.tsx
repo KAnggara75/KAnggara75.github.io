@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
+import Post from "./pages/Post";
 import About from "./pages/About";
 import Header from "./component/Header";
-import Post from "./pages/Post";
+import { Routes, Route } from "react-router";
 
 export default function App() {
 	return (

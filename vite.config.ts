@@ -8,6 +8,7 @@ export default defineConfig({
 	build: {
 		outDir: "./dist",
 		emptyOutDir: true, // also necessary
+		chunkSizeWarningLimit: 1024,
 		rollupOptions: {
 			input: {
 				index: path.resolve(__dirname, "index.html"),

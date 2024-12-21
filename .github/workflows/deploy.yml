@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Compose Markdown index
-        run: chmod +x run.sh && ./run.sh && cat public/pages/index.json
+        run: chmod +x run.sh && ./run.sh
       - name: Build
         run: pnpm build
       - name: Setup Pages

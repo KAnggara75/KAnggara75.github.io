@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { mdxComponents } from "../config/ReactMarkdownStyle";
+import { useParams } from "react-router";
 
 export default function Post() {
+	let params = useParams();
+	const url = params.postId ? params.postId : "KAnggara75";
 	useEffect(() => {
-		fetch(
-			"https://raw.githubusercontent.com/KAnggara75/KAnggara75.github.io/refs/heads/main/pages/react-typescript-vite.md"
-		)
+		fetch("/pages/" + url + ".md")
 			.then((response) => {
 				return response.text();
 			})

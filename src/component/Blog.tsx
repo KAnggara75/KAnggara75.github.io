@@ -1,6 +1,33 @@
 import PostThumb from "./PostThumb";
+import { useEffect, useState } from "react";
+
+interface Posts {
+	pages: [
+		{
+			src: string;
+			img: string;
+			url: string;
+			title: string;
+		},
+	];
+}
 
 export default function Blog() {
+	const [data, setData] = useState<Posts>();
+
+	useEffect(() => {
+		fetch("/index.json")
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				setData(data);
+			})
+			.catch((e: Error) => {
+				console.error(e.message);
+			});
+	}, []);
+
 	return (
 		<section
 			id="blog"
@@ -20,18 +47,19 @@ export default function Blog() {
 					</div>
 				</div>
 				<div className="flex flex-wrap">
-					<PostThumb
-						title={"Tips Belajar Programming"}
-						href={"/blog"}
-					/>
-					<PostThumb
-						title={"Tips Belajar Programming"}
-						href={"/blog"}
-					/>
-					<PostThumb
-						title={"Tips Belajar Programming"}
-						href={"/blog"}
-					/>
+					{data?.pages
+						.reverse()
+						.slice(0, 6)
+						.reverse()
+						.map((post) => (
+							<PostThumb
+								key={post.url}
+								title={post.title}
+								href={post.url}
+								img={post.img}
+								src={post.src}
+							/>
+						))}
 				</div>
 			</div>
 		</section>

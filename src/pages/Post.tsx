@@ -4,8 +4,14 @@ import { mdxComponents } from "../config/ReactMarkdownStyle";
 import { useParams } from "react-router";
 
 export default function Post() {
-	let params = useParams();
+	const params = useParams();
+	const [content, setContent] = useState("");
+
 	const url = params.postId ? params.postId : "KAnggara75";
+
+	console.info(params.postId);
+	console.info(url);
+
 	useEffect(() => {
 		fetch("/pages/" + url + ".md")
 			.then((response) => {
@@ -19,8 +25,6 @@ export default function Post() {
 				console.error(error);
 			});
 	}, []);
-
-	const [content, setContent] = useState("");
 
 	return (
 		<div className="gb-white py-16 px-10">

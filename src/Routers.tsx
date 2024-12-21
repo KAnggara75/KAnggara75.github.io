@@ -4,11 +4,15 @@ import About from "./pages/About";
 import Header from "./component/Header";
 import { Routes, Route } from "react-router";
 
-export default function App() {
+export default function Routers() {
 	return (
 		<>
 			<Header />
 			<Routes>
+				<Route
+					path="*"
+					element={<Home />}
+				/>
 				<Route
 					index
 					path="/"
@@ -23,7 +27,7 @@ export default function App() {
 					element={<About />}
 				/>
 				<Route
-					path="post"
+					path="post/:postId"
 					element={<Post />}
 				/>
 			</Routes>

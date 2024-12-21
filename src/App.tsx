@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Header from "./component/Header";
+import Post from "./pages/Post";
 
 export default function App() {
 	return (
@@ -20,6 +21,10 @@ export default function App() {
 				<Route
 					path="about"
 					element={<About />}
+				/>
+				<Route
+					path="post"
+					element={<Post />}
 				/>
 			</Routes>
 		</>

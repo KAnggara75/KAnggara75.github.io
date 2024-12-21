@@ -1,7 +1,8 @@
 #!/bin/bash
 
 search_dir=.
-INDEX=index.json
+INDEX=$(pwd)/public/index.json
+WORK_DIR=$(pwd)
 
 abort() {
 	echo $platform
@@ -29,7 +30,7 @@ copy_result() {
 }
 
 main() {
-	cd $(pwd)/pages
+	cd $WORK_DIR/pages
 	get_all_file
 	copy_result
 	pnpm fc

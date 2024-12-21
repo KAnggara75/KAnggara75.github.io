@@ -1,16 +1,22 @@
 #!/bin/bash
 
-cd $(pwd)/public/pages
+cd $(pwd)
 
 search_dir=.
 
 URL=
 
-echo "{\"pages\":[" >index.json
+echo -e "{\n\t\"pages\": [" >index.json
 
-for entry in "$search_dir"/*.md; do
-	new_entry=$(echo "$entry" | sed "s/\.\///g")
-	echo -e "\"pages/$new_entry\"," >>index.json
+for file in "$search_dir"/*.md; do
+
+	filename=$(echo "$file" | sed "s/\.\///g")
+	title=$(head -n 1 $file | sed "s/# //g")
+
+	echo -e "\t\t{" >>index.json
+	echo -e "\t\t\t\"title\": \"$title\"," >>index.json
+	echo -e "\t\t\t\"url\": \"pages/$filename\"" >>index.json
+	echo -e "\t\t}," >>index.json
 done
 
-echo "]}" >>index.json
+echo -e "\t]\n}" >>index.json

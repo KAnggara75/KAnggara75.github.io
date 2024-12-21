@@ -1,14 +1,20 @@
 interface PostThumbProps {
 	title: string;
 	href: string;
+	src: string;
+	img: string;
 }
 
-export default function PostThumb({ title, href }: Readonly<PostThumbProps>) {
+export default function PostThumb({
+	title,
+	href,
+	img,
+}: Readonly<PostThumbProps>) {
 	return (
 		<div className="w-full px-4 lg:w-1/2 xl:w-1/3">
 			<div className="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
 				<img
-					src="https://source.unsplash.com/360x240?programming"
+					src={img}
 					alt={title}
 					className="w-full"
 				/>

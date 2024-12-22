@@ -27,6 +27,22 @@ export default function Header() {
 		navMenu!.classList.toggle("hidden");
 	};
 
+	let homeUrl = "/";
+	let blogUrl = "/blog";
+	let aboutUrl = "/about";
+	let clientUrl = "/client";
+	let contactUrl = "/contact";
+	let portofolioUrl = "/portfolio";
+
+	if (window.location.pathname === "/") {
+		homeUrl = "#home";
+		blogUrl = "#blog";
+		aboutUrl = "#about";
+		clientUrl = "#client";
+		contactUrl = "#contact";
+		portofolioUrl = "#portfolio";
+	}
+
 	return (
 		<header className="bg-transparent absolute mt-0 left-0 w-full flex items-center z-10">
 			<div className="container">
@@ -60,7 +76,7 @@ export default function Header() {
 							<ul className="block lg:flex">
 								<li className="group">
 									<a
-										href="#home"
+										href={homeUrl}
 										className="nav-menu"
 									>
 										Home
@@ -68,7 +84,7 @@ export default function Header() {
 								</li>
 								<li className="group">
 									<a
-										href="#about"
+										href={aboutUrl}
 										className="nav-menu"
 									>
 										About Me
@@ -76,7 +92,7 @@ export default function Header() {
 								</li>
 								<li className="group">
 									<a
-										href="#portfolio"
+										href={portofolioUrl}
 										className="nav-menu"
 									>
 										Portfolio
@@ -84,7 +100,7 @@ export default function Header() {
 								</li>
 								<li className="group">
 									<a
-										href="#client"
+										href={clientUrl}
 										className="nav-menu"
 									>
 										Client
@@ -92,7 +108,7 @@ export default function Header() {
 								</li>
 								<li className="group">
 									<a
-										href="#blog"
+										href={blogUrl}
 										className="nav-menu"
 									>
 										Blog
@@ -100,7 +116,7 @@ export default function Header() {
 								</li>
 								<li className="group">
 									<a
-										href="#contact"
+										href={contactUrl}
 										className="nav-menu"
 									>
 										Contact

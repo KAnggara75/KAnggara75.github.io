@@ -22,7 +22,7 @@ export default function Post() {
 			.catch((error) => {
 				console.error(error);
 			});
-	}, []);
+	}, [url]);
 
 	if (content.startsWith("<!doctype html>")) {
 		return <ErrorNotFound />;

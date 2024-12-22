@@ -30,7 +30,7 @@ export default function Post() {
 		return (
 			<>
 				<Header />
-				<div className="gb-white py-16 px-10">
+				<div className="gb-white px-10 py-16">
 					<ReactMarkdown components={mdxComponents}>{content}</ReactMarkdown>
 				</div>
 			</>

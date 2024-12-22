@@ -2,47 +2,49 @@ export default function Hero() {
 	return (
 		<section
 			id="home"
-			className="pt-36"
+			className="pt-36 dark:bg-slate-800"
 		>
 			<div className="container">
 				<div className="flex flex-wrap">
-					<div className="w-full self-center px-4 lg:w-1/2 mb-10">
+					<div className="mb-10 w-full self-center px-4 lg:w-1/2">
 						<h1 className="text-base font-semibold text-primary md:text-xl">
-							Hallo Semuanya,
+							Hallo Semuanya,{" "}
 							<img
 								src="img/hi.gif"
 								alt="hi"
 								width="20px"
 								className="inline-block"
-							/>
+							/>{" "}
 							Perkenalkan Saya
-							<span className="block font-bold text-dark text-4xl mt-1 lg:text-5xl">
+							<span className="mt-1 block text-4xl font-bold text-dark lg:text-5xl dark:text-white">
 								Kelvin Anggara
 							</span>
 						</h1>
-						<h2 className="font-medium text-secondary text-lg mb-5 lg:text-2xl">
-							<span className="text-dark">Software Developer </span> |
-							PHP-Java-Flutter-IoT
+						<h2 className="mb-5 text-lg font-medium text-secondary lg:text-2xl dark:text-slate-300">
+							<span className="text-dark dark:text-white">
+								Software Developer{" "}
+							</span>{" "}
+							| PHP-Java-Flutter-IoT
 						</h2>
-						<p className="font-medium text-secondary mb-10 leading-relaxed">
+						<p className="mb-10 font-medium leading-relaxed text-secondary dark:text-slate-300">
 							Saat ini sedang belajar Spring Boot, Laravel dan Flutter
 							Development.
 						</p>
 						<a
 							href="#footer"
-							className="text-base font-semibold bg-primary py-3 px-8 text-white rounded-full hover:shadow-xl hover:opacity-80 transition duration-300 ease-in-out"
+							className="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-xl"
 						>
 							Hubungi Saya
 						</a>
 					</div>
 					<div className="w-full self-end px-4 lg:w-1/2">
-						<div className="mt-10 relative lg:mt-0 lg:right-0">
+						<div className="relative mt-10 lg:right-0 lg:mt-0">
 							<img
 								src="img/hero.png"
 								alt="Kelvin"
-								className="max-w-full mx-auto"
+								className="mx-auto max-w-full dark:opacity-60 dark:grayscale"
 							/>
-							<span className="absolute -bottom-3 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
+							<span className="absolute -bottom-3 left-1/2 -z-10 -translate-x-1/2 md:scale-125">
 								<svg
 									width="300"
 									viewBox="0 0 200 200"

@@ -1,6 +1,6 @@
 export function Php() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-php hover:bg-php hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-php hover:bg-php hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -16,7 +16,7 @@ export function Php() {
 
 export function Html() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-html hover:bg-html hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-html hover:bg-html hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -32,7 +32,7 @@ export function Html() {
 
 export function Css() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-css hover:bg-css hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-css hover:bg-css hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -48,7 +48,7 @@ export function Css() {
 
 export function JavaScript() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-javascript hover:bg-javascript hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-javascript hover:bg-javascript hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -64,7 +64,7 @@ export function JavaScript() {
 
 export function MongoIcon() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-mongo hover:bg-mongo hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-mongo hover:bg-mongo hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -80,7 +80,7 @@ export function MongoIcon() {
 
 export function ExpressIcon() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-black hover:bg-black hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-black hover:bg-black hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -96,7 +96,7 @@ export function ExpressIcon() {
 
 export function ReactIcon() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-react hover:bg-react hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-react hover:bg-react hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -112,7 +112,7 @@ export function ReactIcon() {
 
 export function NodeIcon() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-node hover:bg-node hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-node hover:bg-node hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -128,7 +128,7 @@ export function NodeIcon() {
 
 export function MysqlIcon() {
 	return (
-		<span className="w-6 h-6 mr-[5px] mb-1 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-mysql hover:bg-mysql hover:text-white">
+		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-mysql hover:bg-mysql hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"

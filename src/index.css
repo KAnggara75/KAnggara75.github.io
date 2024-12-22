@@ -13,15 +13,15 @@ body {
 }
 
 .nav-menu {
-	@apply text-base text-dark py-2 mx-8 flex group-hover:text-primary lg:group-hover:border-b-2 lg:group-hover:border-dark;
+	@apply mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:group-hover:border-b-2 lg:group-hover:border-dark;
 }
 
 .hamburger-line {
-	@apply w-full h-[2px] absolute block bg-dark transform transition duration-300 ease-in-out;
+	@apply absolute block h-[2px] w-full transform bg-dark transition duration-300 ease-in-out;
 }
 
 .hamburger-active > div > span:nth-child(1) {
-	@apply -rotate-45 translate-y-0;
+	@apply translate-y-0 -rotate-45;
 }
 
 .hamburger-active > div > span:nth-child(2) {
@@ -29,5 +29,5 @@ body {
 }
 
 .hamburger-active > div > span:nth-child(3) {
-	@apply rotate-45 translate-y-0;
+	@apply translate-y-0 rotate-45;
 }

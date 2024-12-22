@@ -44,13 +44,13 @@ export default function Header() {
 	}
 
 	return (
-		<header className="bg-transparent absolute mt-0 left-0 w-full flex items-center z-10">
+		<header className="absolute left-0 z-10 mt-0 flex w-full items-center bg-transparent">
 			<div className="container">
-				<div className="flex items-center justify-between relative">
+				<div className="relative flex items-center justify-between">
 					<div className="px-4">
 						<a
 							href="/"
-							className="font-bold text-lg text-primary block py-4"
+							className="block py-4 text-lg font-bold text-primary"
 						>
 							Kelvin Anggara
 						</a>
@@ -61,9 +61,9 @@ export default function Header() {
 							name="humberger"
 							type="button"
 							onClick={hamburger}
-							className="absolute flex items-center right-4 lg:invisible"
+							className="absolute right-4 flex items-center lg:invisible"
 						>
-							<div className="w-8 flex items-center justify-center relative">
+							<div className="relative flex w-8 items-center justify-center">
 								<span className="hamburger-line -translate-y-2"></span>
 								<span className="hamburger-line"></span>
 								<span className="hamburger-line translate-y-2"></span>
@@ -71,7 +71,7 @@ export default function Header() {
 						</button>
 						<nav
 							id="nav-menu"
-							className="hidden absolute py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+							className="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-2 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
 						>
 							<ul className="block lg:flex">
 								<li className="group">

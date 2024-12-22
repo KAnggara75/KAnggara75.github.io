@@ -2,27 +2,27 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className="py-36"
+			className="py-36 dark:bg-slate-800"
 		>
 			<div className="container">
 				<div className="flex flex-wrap">
-					<div className="w-full mb-10 px-4 lg:w-1/2">
-						<h4 className="font-bold uppercase text-primary text-lg mb-3">
+					<div className="mb-10 w-full px-4 lg:w-1/2">
+						<h4 className="mb-3 text-lg font-bold uppercase text-primary">
 							Tentang Saya
 						</h4>
-						<h2 className="text-3xl font-bold mb-5 text-dark max-w-md lg:text-4xl">
+						<h2 className="mb-5 max-w-md text-3xl font-bold text-dark lg:text-4xl dark:text-slate-100">
 							Kunjungi Repo Saya
 						</h2>
-						<p className="font-medium text-base text-secondary max-w-xl lg:text-lg">
+						<p className="max-w-xl text-base font-medium text-secondary lg:text-lg">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
 							nulla reiciendis facilis nihil sint unde beatae?
 						</p>
 					</div>
 					<div className="w-full px-4 lg:w-1/2">
-						<h3 className="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">
+						<h3 className="mb-4 text-2xl font-semibold text-dark lg:pt-10 lg:text-3xl dark:text-slate-100">
 							Let's Connect!
 						</h3>
-						<p className="font-medium text-base text-secondary mb-6 lg:text-lg">
+						<p className="mb-6 text-base font-medium text-secondary lg:text-lg">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
 							dolores iusto vero atque odio pariatur earum! At rem eligendi
 							molestias!
@@ -32,12 +32,11 @@ export default function About() {
 							<a
 								href="https://www.youtube.com/@KAnggara75"
 								target="_blank"
-								className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-red-500 hover:bg-red-500 hover:text-white"
+								className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-red-500 hover:bg-red-500 hover:text-white"
 							>
 								<svg
 									className="fill-current"
 									width="20"
-									role="img"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -49,12 +48,11 @@ export default function About() {
 							<a
 								href="http://github.com/kanggara75"
 								target="_blank"
-								className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-slate-700 hover:bg-[#181717] hover:text-white"
+								className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-slate-700 hover:bg-[#181717] hover:text-white"
 							>
 								<svg
 									className="fill-current"
 									width="20"
-									role="img"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -66,12 +64,11 @@ export default function About() {
 							<a
 								href="https://id.linkedin.com/in/kanggara75"
 								target="_blank"
-								className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white"
+								className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white"
 							>
 								<svg
 									className="fill-current"
 									width="20"
-									role="img"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -83,12 +80,11 @@ export default function About() {
 							<a
 								href="http://instagram.com/kanggara75"
 								target="_blank"
-								className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-rose-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white"
+								className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-rose-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white"
 							>
 								<svg
 									className="fill-current"
 									width="20"
-									role="img"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -100,12 +96,11 @@ export default function About() {
 							<a
 								href="http://x.com/kanggara75"
 								target="_blank"
-								className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-black hover:bg-black hover:text-white"
+								className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-black hover:bg-black hover:text-white"
 							>
 								<svg
 									className="fill-current"
 									width="20"
-									role="img"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>

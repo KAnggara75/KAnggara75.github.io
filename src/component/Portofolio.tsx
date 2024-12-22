@@ -14,33 +14,33 @@ export default function Portofolio() {
 	return (
 		<section
 			id="portfolio"
-			className="pt-36 pb-16 bg-slate-100"
+			className="bg-slate-100 pb-16 pt-36 dark:bg-slate-800"
 		>
 			<div className="container">
 				<div className="w-full px-4">
-					<div className="mx-auto text-center mb-16">
-						<h4 className="font-semibold text-lg text-primary mb-2 sm:text-4xl lg:text-5xl">
+					<div className="mx-auto mb-16 text-center">
+						<h4 className="mb-2 text-lg font-semibold text-primary sm:text-4xl lg:text-5xl">
 							Portfolio
 						</h4>
-						<h2 className="font-bold text-dark text-3xl mb-4 md:text-lg">
+						<h2 className="mb-4 text-3xl font-bold text-dark md:text-lg dark:text-slate-100">
 							Project Terbaru
 						</h2>
-						<p className="font-medium text-md text-secondary">
+						<p className="text-md font-medium text-secondary">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. At est
 							doloribus voluptatibus, eos beatae sed ea sequi odio vel dolores?
 						</p>
 					</div>
 				</div>
-				<div className="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+				<div className="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
 					<div className="mb-12 p-4 md:w-1/2">
-						<div className="rounded-md shadow-md overflow-hidden">
+						<div className="overflow-hidden rounded-md shadow-md">
 							<img
 								src="img/porto/p1.jpeg"
 								alt="Landing Page"
 								width="w-full"
 							/>
 						</div>
-						<h3 className="font-semibold text-xl text-dark mt-5 mb-2">
+						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
 							Kelvin Anggara
 						</h3>
 						<div className="flex">
@@ -49,20 +49,20 @@ export default function Portofolio() {
 							<Css />
 							<JavaScript />
 						</div>
-						<p className="font-medium text-base text-secondary">
+						<p className="text-base font-medium text-secondary">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							Consectetur aliquid aut ipsum!
 						</p>
 					</div>
 					<div className="mb-12 p-4 md:w-1/2">
-						<div className="rounded-md shadow-md overflow-hidden">
+						<div className="overflow-hidden rounded-md shadow-md">
 							<img
 								src="img/porto/p2.jpeg"
 								alt="E-Commerce"
 								width="w-full"
 							/>
 						</div>
-						<h3 className="font-semibold text-xl text-dark mt-5 mb-2">
+						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
 							E-Commerce
 						</h3>
 						<div className="flex">
@@ -71,20 +71,20 @@ export default function Portofolio() {
 							<Css />
 							<JavaScript />
 						</div>
-						<p className="font-medium text-base text-secondary">
+						<p className="text-base font-medium text-secondary">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							Consectetur aliquid aut ipsum!
 						</p>
 					</div>
 					<div className="mb-12 p-4 md:w-1/2">
-						<div className="rounded-md shadow-md overflow-hidden">
+						<div className="overflow-hidden rounded-md shadow-md">
 							<img
 								src="img/porto/p3.jpeg"
 								alt="Technical Documentation"
 								width="w-full"
 							/>
 						</div>
-						<h3 className="font-semibold text-xl text-dark mt-5 mb-2">
+						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
 							Technical Documentation
 						</h3>
 						<div className="flex">
@@ -93,20 +93,20 @@ export default function Portofolio() {
 							<ReactIcon />
 							<NodeIcon />
 						</div>
-						<p className="font-medium text-base text-secondary">
+						<p className="text-base font-medium text-secondary">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							Consectetur aliquid aut ipsum!
 						</p>
 					</div>
 					<div className="mb-12 p-4 md:w-1/2">
-						<div className="rounded-md shadow-md overflow-hidden">
+						<div className="overflow-hidden rounded-md shadow-md">
 							<img
 								src="img/porto/p4.jpeg"
 								alt="Tribute Page"
 								width="w-full"
 							/>
 						</div>
-						<h3 className="font-semibold text-xl text-dark mt-5 mb-2">
+						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
 							Tribute Page
 						</h3>
 						<div className="flex">
@@ -115,7 +115,7 @@ export default function Portofolio() {
 							<ReactIcon />
 							<NodeIcon />
 						</div>
-						<p className="font-medium text-base text-secondary">
+						<p className="text-base font-medium text-secondary">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							Consectetur aliquid aut ipsum!
 						</p>

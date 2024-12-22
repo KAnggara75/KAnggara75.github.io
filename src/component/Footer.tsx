@@ -1,16 +1,16 @@
 export default function Footer() {
 	return (
 		<footer
-			className="bg-dark pt-24 pb-12"
+			className="bg-dark pb-12 pt-24"
 			id="footer"
 		>
 			<div className="container">
 				<div className="flex flex-wrap">
-					<div className="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-						<h2 className="font-bold text-4xl text-white mb-5">
+					<div className="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+						<h2 className="mb-5 text-4xl font-bold text-white">
 							Kelvin Anggara
 						</h2>
-						<h3 className="font-bold text-2xl mb-2">Hubungi Saya</h3>
+						<h3 className="mb-2 text-2xl font-bold">Hubungi Saya</h3>
 						<p>
 							<a href="mailto:kelvin.kanggara@gmail.com">
 								kelvin.kanggara@gmail.com
@@ -18,15 +18,15 @@ export default function Footer() {
 						</p>
 					</div>
 
-					<div className="w-full px-4 mb-12 md:w-1/3">
-						<h3 className="font-semibold text-xl text-white mb-5">
+					<div className="mb-12 w-full px-4 md:w-1/3">
+						<h3 className="mb-5 text-xl font-semibold text-white">
 							Kategori Tulisan
 						</h3>
 						<ul className="text-slate-300">
 							<li>
 								<a
 									href="#"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Programing
 								</a>
@@ -34,7 +34,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="#"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Teknologi
 								</a>
@@ -42,7 +42,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="#"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Tips & Trik
 								</a>
@@ -50,13 +50,13 @@ export default function Footer() {
 						</ul>
 					</div>
 
-					<div className="w-full px-4 mb-12 md:w-1/3">
-						<h3 className="font-semibold text-xl text-white mb-5">Tautan</h3>
+					<div className="mb-12 w-full px-4 md:w-1/3">
+						<h3 className="mb-5 text-xl font-semibold text-white">Tautan</h3>
 						<ul className="text-slate-300">
 							<li>
 								<a
 									href="#home"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Beranda
 								</a>
@@ -64,7 +64,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="#about"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									About Me
 								</a>
@@ -72,7 +72,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="#portfolio"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Portfolio
 								</a>
@@ -80,7 +80,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="#client"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Client
 								</a>
@@ -88,7 +88,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="#blog"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Blog
 								</a>
@@ -96,7 +96,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="#contact"
-									className="inline-block text-base hover:text-primary mb-3"
+									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Contact
 								</a>
@@ -105,13 +105,13 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="w-full pt-10 border-t border-slate-700">
-					<div className="flex items-center justify-center mb-5">
+				<div className="w-full border-t border-slate-700 pt-10">
+					<div className="mb-5 flex items-center justify-center">
 						{/* <!-- YouTube --> */}
 						<a
 							href="https://www.youtube.com/@KAnggara75"
 							target="_blank"
-							className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-red-500 hover:bg-red-500 hover:text-white"
+							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-red-500 hover:bg-red-500 hover:text-white"
 						>
 							<svg
 								className="fill-current"
@@ -128,7 +128,7 @@ export default function Footer() {
 						<a
 							href="http://github.com/kanggara75"
 							target="_blank"
-							className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-slate-700 hover:bg-[#181717] hover:text-white"
+							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-slate-700 hover:bg-[#181717] hover:text-white"
 						>
 							<svg
 								className="fill-current"
@@ -145,7 +145,7 @@ export default function Footer() {
 						<a
 							href="https://id.linkedin.com/in/kanggara75"
 							target="_blank"
-							className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white"
+							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white"
 						>
 							<svg
 								className="fill-current"
@@ -162,7 +162,7 @@ export default function Footer() {
 						<a
 							href="http://instagram.com/kanggara75"
 							target="_blank"
-							className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-rose-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white"
+							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-rose-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white"
 						>
 							<svg
 								className="fill-current"
@@ -179,7 +179,7 @@ export default function Footer() {
 						<a
 							href="http://x.com/kanggara75"
 							target="_blank"
-							className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-black hover:bg-black hover:text-white"
+							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-black hover:bg-black hover:text-white"
 						>
 							<svg
 								className="fill-current"
@@ -193,7 +193,7 @@ export default function Footer() {
 							</svg>
 						</a>
 					</div>
-					<p className="text-medium text-xs text-slate-500 text-center">
+					<p className="text-medium text-center text-xs text-slate-500">
 						Dibuat dengan <span className="text-pink-500"> ♥️ </span> oleh
 						<a
 							href="https://instagram.com/kanggara75"

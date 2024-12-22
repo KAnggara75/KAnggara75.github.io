@@ -1,16 +1,16 @@
 export default function ErrorNotFound() {
 	return (
-		<main className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
-			<h1 className="text-9xl font-extrabold text-white tracking-widest">
+		<main className="flex h-screen w-full flex-col items-center justify-center bg-[#1A2238]">
+			<h1 className="text-9xl font-extrabold tracking-widest text-white">
 				404
 			</h1>
-			<div className="bg-primary px-6 text-md rounded text-white rotate-[20deg] absolute">
+			<div className="text-md absolute rotate-[20deg] rounded bg-primary px-6 text-white">
 				Page Not Found
 			</div>
 			<button className="mt-5">
-				<div className="relative inline-block text-sm font-medium text-primary group active:text-primary focus:outline-none focus:ring">
-					<span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-primary group-hover:translate-y-0 group-hover:translate-x-0"></span>
-					<span className="relative block px-8 py-3 bg-[#1A2238] border border-current">
+				<div className="group relative inline-block text-sm font-medium text-primary focus:outline-none focus:ring active:text-primary">
+					<span className="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-primary transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></span>
+					<span className="relative block border border-current bg-[#1A2238] px-8 py-3">
 						<a href="/">Go Home</a>
 					</span>
 				</div>

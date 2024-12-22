@@ -22,7 +22,7 @@ export default function Portofolio() {
 						<h4 className="mb-2 text-lg font-semibold text-primary sm:text-4xl lg:text-5xl">
 							Portfolio
 						</h4>
-						<h2 className="mb-4 text-3xl font-bold text-dark md:text-lg dark:text-slate-100">
+						<h2 className="mb-4 text-3xl font-bold text-dark dark:text-slate-100 md:text-lg">
 							Project Terbaru
 						</h2>
 						<p className="text-md font-medium text-secondary">

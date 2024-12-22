@@ -12,11 +12,11 @@ body {
 }
 
 .nav-menu {
-	@apply mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:group-hover:border-b-2 lg:group-hover:border-dark dark:text-white;
+	@apply mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white lg:group-hover:border-b-2 lg:group-hover:border-dark;
 }
 
 .hamburger-line {
-	@apply absolute block h-[2px] w-full transform bg-dark transition duration-300 ease-in-out;
+	@apply absolute block h-[2px] w-full transform bg-dark transition duration-300 ease-in-out dark:bg-white;
 }
 
 .hamburger-active > div > span:nth-child(1) {

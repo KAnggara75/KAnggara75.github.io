@@ -116,7 +116,6 @@ export default function Footer() {
 							<svg
 								className="fill-current"
 								width="20"
-								role="img"
 								viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg"
 							>
@@ -133,7 +132,6 @@ export default function Footer() {
 							<svg
 								className="fill-current"
 								width="20"
-								role="img"
 								viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg"
 							>
@@ -150,7 +148,6 @@ export default function Footer() {
 							<svg
 								className="fill-current"
 								width="20"
-								role="img"
 								viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg"
 							>
@@ -167,7 +164,6 @@ export default function Footer() {
 							<svg
 								className="fill-current"
 								width="20"
-								role="img"
 								viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg"
 							>
@@ -184,7 +180,6 @@ export default function Footer() {
 							<svg
 								className="fill-current"
 								width="20"
-								role="img"
 								viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg"
 							>
@@ -194,15 +189,15 @@ export default function Footer() {
 						</a>
 					</div>
 					<p className="text-medium text-center text-xs text-slate-500">
-						Dibuat dengan <span className="text-pink-500"> ♥️ </span> oleh
+						Dibuat dengan <span className="text-pink-500"> ♥️ </span> oleh{" "}
 						<a
 							href="https://instagram.com/kanggara75"
 							target="_blank"
 							className="font-bold text-primary"
 						>
 							Kelvin Anggara
-						</a>
-						menggunakan
+						</a>{" "}
+						menggunakan{" "}
 						<a
 							href="https://tailwindcss.com"
 							target="_blank"

@@ -2,7 +2,7 @@ export default function Hero() {
 	return (
 		<section
 			id="home"
-			className="pt-36 dark:bg-slate-800"
+			className="pt-36 dark:bg-dark"
 		>
 			<div className="container">
 				<div className="flex flex-wrap">

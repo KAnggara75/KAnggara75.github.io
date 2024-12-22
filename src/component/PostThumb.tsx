@@ -12,7 +12,7 @@ export default function PostThumb({
 }: Readonly<PostThumbProps>) {
 	return (
 		<div className="w-full px-4 lg:w-1/2 xl:w-1/3">
-			<div className="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-dark">
+			<div className="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-700">
 				<img
 					src={img}
 					alt={title}

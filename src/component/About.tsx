@@ -2,7 +2,7 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className="py-36 dark:bg-slate-800"
+			className="py-24 dark:bg-slate-800"
 		>
 			<div className="container">
 				<div className="flex flex-wrap">

@@ -14,7 +14,7 @@ export default function Portofolio() {
 	return (
 		<section
 			id="portfolio"
-			className="bg-slate-100 pb-16 pt-36 dark:bg-slate-800"
+			className="bg-slate-100 py-16 dark:bg-dark"
 		>
 			<div className="container">
 				<div className="w-full px-4">

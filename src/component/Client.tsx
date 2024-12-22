@@ -2,7 +2,7 @@ export default function Client() {
 	return (
 		<section
 			id="client"
-			className="bg-slate-700 pb-32 pt-36 dark:bg-slate-900"
+			className="bg-slate-700 py-24 dark:bg-slate-800"
 		>
 			<div className="container">
 				<div className="w-full px-4">

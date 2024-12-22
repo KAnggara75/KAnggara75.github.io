@@ -2,20 +2,13 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
 	const html = document.querySelector("html");
+	const themeWatcher = window.matchMedia("(prefers-color-scheme: dark)");
 
-	const [dark, setDark] = useState<boolean>(
-		window.matchMedia("(prefers-color-scheme: dark)").matches
-	);
+	const [dark, setDark] = useState<boolean>(themeWatcher.matches);
 
-	const toggleTheme = () => {
-		if (dark) {
-			html?.classList.add("dark");
-			setDark(false);
-		} else {
-			html?.classList.remove("dark");
-			setDark(true);
-		}
-	};
+	themeWatcher.addEventListener("change", (e) => {
+		setDark(e.matches);
+	});
 
 	/* Method that will fix header after a specific scrollable */
 	const isSticky = () => {
@@ -59,10 +52,8 @@ export default function Header() {
 	// Sticky Menu Area
 	useEffect(() => {
 		if (dark) {
-			console.info("dark");
 			html?.classList.add("dark");
 		} else {
-			console.info("light");
 			html?.classList.remove("dark");
 		}
 
@@ -70,7 +61,7 @@ export default function Header() {
 		return () => {
 			window.removeEventListener("scroll", isSticky);
 		};
-	}, [dark, html]);
+	}, [dark, html, themeWatcher]);
 
 	return (
 		<header className="absolute left-0 z-10 mt-0 flex w-full items-center bg-transparent">
@@ -100,7 +91,7 @@ export default function Header() {
 						</button>
 						<nav
 							id="nav-menu"
-							className="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-2 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
+							className="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-2 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
 						>
 							<ul className="block lg:flex">
 								<li className="group">
@@ -151,15 +142,21 @@ export default function Header() {
 										Contact
 									</a>
 								</li>
-								<li className="group">
-									<div className="ml-3 flex flex-col justify-center">
+								<li className="mt-3 lg:mt-1">
+									<div className="mx-3 flex flex-col justify-center">
 										<input
 											type="checkbox"
 											id="light-switch"
 											name="light-switch"
 											className="light-switch sr-only"
 											checked={dark === true}
-											onChange={toggleTheme}
+											onChange={() => {
+												if (dark) {
+													setDark(false);
+												} else {
+													setDark(true);
+												}
+											}}
 										/>
 										<label
 											className="relative cursor-pointer p-2"
@@ -172,11 +169,11 @@ export default function Header() {
 												xmlns="http://www.w3.org/2000/svg"
 											>
 												<path
-													className="fill-slate-300"
+													className="fill-blue-500"
 													d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"
 												/>
 												<path
-													className="fill-slate-400"
+													className="fill-blue-400"
 													d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z"
 												/>
 											</svg>

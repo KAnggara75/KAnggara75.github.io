@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import { mdxComponents } from "../config/ReactMarkdownStyle";
+import ErrorNotFound from "./404";
+import Header from "../component/Header";
 import { useParams } from "react-router";
+import ReactMarkdown from "react-markdown";
+import { useEffect, useState } from "react";
+import { mdxComponents } from "../config/ReactMarkdownStyle";
 
 export default function Post() {
 	const params = useParams();
 	const [content, setContent] = useState("");
 
-	const url = params.postId ? params.postId : "KAnggara75";
-
-	console.info(params.postId);
-	console.info(url);
+	const url = params.postId ? params.postId : "kanggara75";
 
 	useEffect(() => {
 		fetch("/pages/" + url + ".md")
@@ -18,7 +17,6 @@ export default function Post() {
 				return response.text();
 			})
 			.then((text) => {
-				console.log(text);
 				setContent(text);
 			})
 			.catch((error) => {
@@ -26,9 +24,16 @@ export default function Post() {
 			});
 	}, []);
 
-	return (
-		<div className="gb-white py-16 px-10">
-			<ReactMarkdown components={mdxComponents}>{content}</ReactMarkdown>
-		</div>
-	);
+	if (content.startsWith("<!doctype html>")) {
+		return <ErrorNotFound />;
+	} else {
+		return (
+			<>
+				<Header />
+				<div className="gb-white py-16 px-10">
+					<ReactMarkdown components={mdxComponents}>{content}</ReactMarkdown>
+				</div>
+			</>
+		);
+	}
 }

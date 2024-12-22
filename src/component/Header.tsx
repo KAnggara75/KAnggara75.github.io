@@ -12,10 +12,15 @@ export default function Header() {
 	/* Method that will fix header after a specific scrollable */
 	const isSticky = () => {
 		const header = document.querySelector("header");
+		const toTop = document.querySelector("#to-top");
 
 		if (window.scrollY > header!.offsetTop) {
 			header!.classList.add("navbar-fixed");
+			toTop!.classList.remove("hidden");
+			toTop!.classList.add("flex");
 		} else {
+			toTop!.classList.add("hidden");
+			toTop!.classList.remove("flex");
 			header!.classList.remove("navbar-fixed");
 		}
 	};

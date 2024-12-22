@@ -5,6 +5,7 @@ import Client from "../component/Client";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Contact from "../component/Contact";
+import BackToTop from "../component/BackToTop";
 import Portofolio from "../component/Portofolio";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
 			<Blog />
 			<Contact />
 			<Footer />
+			<BackToTop />
 		</>
 	);
 }

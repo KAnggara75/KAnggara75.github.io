@@ -3,20 +3,40 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const mdxComponents: Components = {
-	ul: ({ children }) => <ul className="ml-4 mt-4 list-disc">{children}</ul>,
-	li: ({ children }) => <li className="mt-1">{children}</li>,
-	h1: ({ children }) => <h1 className="mb-4 text-3xl font-bold">{children}</h1>,
-	h2: ({ children }) => <h2 className="text-2xl font-bold">{children}</h2>,
-	h3: ({ children }) => <h3 className="text-xl font-bold">{children}</h3>,
-	h4: ({ children }) => <h4 className="text-lg font-bold">{children}</h4>,
-	h5: ({ children }) => <h5 className="text-base font-bold">{children}</h5>,
-	h6: ({ children }) => <h6 className="text-sm font-bold">{children}</h6>,
-	p: ({ children }) => (
-		<p className="mb-4 leading-relaxed text-gray-800">{children}</p>
+	h1: ({ children }) => (
+		<h1 className="mb-4 text-3xl font-bold dark:text-white">{children}</h1>
 	),
-	em: ({ children }) => <em className="text-blue-500">{children}</em>,
+	h2: ({ children }) => (
+		<h2 className="text-2xl font-bold dark:text-white">{children}</h2>
+	),
+	h3: ({ children }) => (
+		<h3 className="text-xl font-bold dark:text-white">{children}</h3>
+	),
+	h4: ({ children }) => (
+		<h4 className="text-lg font-bold dark:text-white">{children}</h4>
+	),
+	h5: ({ children }) => (
+		<h5 className="text-base font-bold dark:text-white">{children}</h5>
+	),
+	h6: ({ children }) => (
+		<h6 className="text-sm font-bold dark:text-white">{children}</h6>
+	),
+	ul: ({ children }) => (
+		<ul className="ml-4 mt-4 list-disc dark:text-slate-300">{children}</ul>
+	),
+	li: ({ children }) => (
+		<li className="mt-1 dark:text-slate-300">{children}</li>
+	),
+	p: ({ children }) => (
+		<p className="mb-4 leading-relaxed text-gray-800 dark:text-slate-300">
+			{children}
+		</p>
+	),
+	em: ({ children }) => (
+		<em className="text-blue-500 dark:text-slate-300">{children}</em>
+	),
 	blockquote: ({ children }) => (
-		<blockquote className="my-4 border-l-4 border-blue-500 bg-gray-100 px-4 py-3">
+		<blockquote className="my-4 border-l-4 border-blue-500 bg-gray-100 px-4 py-3 dark:text-slate-300">
 			{children}{" "}
 		</blockquote>
 	),
@@ -26,7 +46,7 @@ export const mdxComponents: Components = {
 	a: ({ href, children }) => (
 		<a
 			href={href}
-			className="text-green-500 hover:text-green-800 hover:underline"
+			className="text-green-500 hover:text-green-800 hover:underline dark:text-blue-500"
 			target="_blank"
 			rel="noopener noreferrer"
 		>

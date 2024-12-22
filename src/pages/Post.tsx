@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
 import { mdxComponents } from "../config/ReactMarkdownStyle";
+import BackToTop from "../component/BackToTop";
 
 export default function Post() {
 	const params = useParams();
@@ -30,9 +31,10 @@ export default function Post() {
 		return (
 			<>
 				<Header />
-				<div className="gb-white px-10 py-16">
+				<div className="gb-white px-10 py-16 dark:bg-dark">
 					<ReactMarkdown components={mdxComponents}>{content}</ReactMarkdown>
 				</div>
+				<BackToTop />
 			</>
 		);
 	}

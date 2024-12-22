@@ -3,8 +3,8 @@ import Header from "../component/Header";
 import { useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
-import { mdxComponents } from "../config/ReactMarkdownStyle";
 import BackToTop from "../component/BackToTop";
+import { mdxComponents } from "../config/ReactMarkdownStyle";
 
 export default function Post() {
 	const params = useParams();

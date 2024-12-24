@@ -30,11 +30,21 @@ get_all_file() {
 		# remofe line 1 to 8
 		sed '1,8d' $file >../public/pages/$YYYY/$MM/$DD-$name
 
+		# pharse from md file
 		url=$(echo "$filename" | sed "s/\.md//g")
-		title=$(head -n 1 $file | sed "s/# //g")
+		title=$(sed -n '/title:/I{p;q;}' $file | sed "s/title: //g")
+		tags=$(sed -n '/tags:/I{p;q;}' $file | sed "s/tags: \[//g" | sed 's/\]//g' | sed 's/, /","/g' | sed 's/^/["/' | sed 's/$/"]/')
+		subtitle=$(sed -n '/subtitle:/I{p;q;}' $file | sed "s/subtitle: //g")
+		source=$(sed -n '/source:/I{p;q;}' $file | sed "s/source: //g")
+		author=$(sed -n '/author:/I{p;q;}' $file | sed "s/author: //g")
 
+		# Write to file
 		echo -e "\t\t{" >>$INDEX
 		echo -e "\t\t\t\"title\": \"$title\"," >>$INDEX
+		echo -e "\t\t\t\"subtitle\": \"$subtitle\"," >>$INDEX
+		echo -e "\t\t\t\"tags\": $tags," >>$INDEX
+		echo -e "\t\t\t\"source\": \"$source\"," >>$INDEX
+		echo -e "\t\t\t\"author\": \"$author\"," >>$INDEX
 		echo -e "\t\t\t\"url\": \"post/$url\"," >>$INDEX
 		echo -e "\t\t\t\"src\": \"pages/$filename\"," >>$INDEX
 

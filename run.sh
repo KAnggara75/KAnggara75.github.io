@@ -26,6 +26,10 @@ get_all_file() {
 		mkdir -p ../public/pages/$YYYY
 		mkdir -p ../public/pages/$YYYY/$MM
 
+		# copy md file to public
+		# remofe line 1 to 8
+		sed '1,8d' $file >../public/pages/$YYYY/$MM/$DD-$name
+
 		url=$(echo "$filename" | sed "s/\.md//g")
 		title=$(head -n 1 $file | sed "s/# //g")
 

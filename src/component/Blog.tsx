@@ -4,10 +4,14 @@ import { useEffect, useState } from "react";
 interface Posts {
 	pages: [
 		{
+			title: string;
+			subtitle: string;
+			tags: string[];
+			source: string;
+			author: string;
+			url: string;
 			src: string;
 			img: string;
-			url: string;
-			title: string;
 		},
 	];
 }
@@ -21,6 +25,7 @@ export default function Blog() {
 				return response.json();
 			})
 			.then((data) => {
+				console.info(data);
 				setData(data);
 			})
 			.catch((e: Error) => {
@@ -58,6 +63,8 @@ export default function Blog() {
 								href={post.url}
 								img={post.img}
 								src={post.src}
+								subtitle={post.subtitle}
+								tags={post.tags}
 							/>
 						))}
 				</div>

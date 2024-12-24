@@ -11,8 +11,12 @@ export default function Post() {
 	const [content, setContent] = useState("");
 
 	const url = params.postId ? params.postId : "kanggara75";
+	const yyyy = params.yyyy ? params.yyyy : "2022";
+	const mm = params.mm ? params.mm : "01";
 
 	useEffect(() => {
+		console.info("/pages/" + yyyy + "/" + mm + "/" + url + ".md");
+		console.info(params);
 		fetch("/pages/" + url + ".md")
 			.then((response) => {
 				return response.text();
@@ -23,7 +27,7 @@ export default function Post() {
 			.catch((error) => {
 				console.error(error);
 			});
-	}, [url]);
+	}, [url, params, yyyy, mm]);
 
 	if (content.startsWith("<!doctype html>")) {
 		return <ErrorNotFound />;

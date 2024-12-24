@@ -22,7 +22,7 @@ export default function Routers() {
 				element={<About />}
 			/>
 			<Route
-				path="post/:postId"
+				path="post/:yyyy/:mm/:postId"
 				element={<Post />}
 			/>
 		</Routes>

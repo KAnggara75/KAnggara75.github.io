@@ -4,6 +4,9 @@ search_dir=.
 INDEX=$(pwd)/public/index.json
 PUBLIC_IMG=$(pwd)/public/img
 WORK_DIR=$(pwd)
+YYYY=1999
+MM=01
+DD=24
 
 abort() {
 	echo $platform
@@ -15,6 +18,14 @@ get_all_file() {
 	echo -e "{\n\t\"pages\": [" >$INDEX
 	for file in "$search_dir"/*.md; do
 		filename=$(echo "$file" | sed "s/\.\///g")
+
+		# Pisahkan berdasarkan tanda '-'
+		IFS='-' read -r YYYY MM DD name <<<"$filename"
+
+		# membuat folder hanya jika folder tersebut belum ada
+		mkdir -p ../public/pages/$YYYY
+		mkdir -p ../public/pages/$YYYY/$MM
+
 		url=$(echo "$filename" | sed "s/\.md//g")
 		title=$(head -n 1 $file | sed "s/# //g")
 
@@ -38,15 +49,11 @@ get_all_file() {
 	echo -e "\t]\n}" >>$INDEX
 }
 
-copy_result() {
-	cd ..
-	cp -rf pages public/
-}
-
 main() {
+	rm -rf public/pages
+	mkdir public/pages
 	cd $WORK_DIR/pages
 	get_all_file
-	copy_result
 	pnpm fc
 }
 

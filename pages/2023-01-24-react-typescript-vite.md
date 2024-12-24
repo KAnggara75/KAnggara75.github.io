@@ -1,3 +1,11 @@
+---
+title: Panel Surya: Sumber Energi Ramah Lingkungan
+subtitle: Sumber Energi Ramah Lingkungan
+tags: [ethereum, blockchain, distributed computing, dao, governance]
+source: https://graymirror.substack.com/p/the-blockchain-and-the-whitechain
+author: Kelvin Anggara
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

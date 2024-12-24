@@ -1,0 +1,52 @@
+{
+	"pages": [
+		{
+			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
+			"subtitle": "Sumber Energi Ramah Lingkungan",
+			"tags": [
+				"ethereum",
+				"blockchain",
+				"distributed computing",
+				"dao",
+				"governance"
+			],
+			"source": "https://graymirror.substack.com/p/the-blockchain-and-the-whitechain",
+			"author": "Kelvin Anggara",
+			"url": "post/2022-01-24-kanggara75",
+			"src": "pages/2022-01-24-kanggara75.md",
+			"img": "img/default.jpeg"
+		},
+		{
+			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
+			"subtitle": "Sumber Energi Ramah Lingkungan",
+			"tags": [
+				"ethereum",
+				"blockchain",
+				"distributed computing",
+				"dao",
+				"governance"
+			],
+			"source": "https://graymirror.substack.com/p/the-blockchain-and-the-whitechain",
+			"author": "Kelvin Anggara",
+			"url": "post/2023-01-24-react-typescript-vite",
+			"src": "pages/2023-01-24-react-typescript-vite.md",
+			"img": "img/default.jpeg"
+		},
+		{
+			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
+			"subtitle": "Sumber Energi Ramah Lingkungan",
+			"tags": [
+				"ethereum",
+				"blockchain",
+				"distributed computing",
+				"dao",
+				"governance"
+			],
+			"source": "https://graymirror.substack.com/p/the-blockchain-and-the-whitechain",
+			"author": "Kelvin Anggara",
+			"url": "post/2024-01-24-react-typescript-vite2",
+			"src": "pages/2024-01-24-react-typescript-vite2.md",
+			"img": "img/default.jpeg"
+		}
+	]
+}

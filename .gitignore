@@ -13,7 +13,6 @@ dist
 dist-ssr
 *.local
 public/pages
-public/index.json
 
 # Editor directories and files
 .vscode/*

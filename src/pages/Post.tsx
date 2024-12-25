@@ -55,7 +55,7 @@ export default function Post() {
 		return (
 			<>
 				<Header />
-				<article className="gb-white px-10 pb-16 pt-28 dark:bg-dark">
+				<article className="bg-slate-200 px-10 pb-16 pt-28 dark:bg-dark">
 					<div
 						className=""
 						id="articleHeader"

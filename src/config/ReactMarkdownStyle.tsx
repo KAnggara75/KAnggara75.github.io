@@ -3,23 +3,21 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const mdxComponents: Components = {
-	h1: ({ children }) => (
-		<h1 className="mb-4 text-3xl font-bold dark:text-white">{children}</h1>
-	),
+	h1: ({ children }) => <h1 className="hidden">{children}</h1>,
 	h2: ({ children }) => (
-		<h2 className="text-2xl font-bold dark:text-white">{children}</h2>
+		<h2 className="text-xl font-bold dark:text-white">{children}</h2>
 	),
 	h3: ({ children }) => (
-		<h3 className="text-xl font-bold dark:text-white">{children}</h3>
+		<h3 className="text-lg font-bold dark:text-white">{children}</h3>
 	),
 	h4: ({ children }) => (
-		<h4 className="text-lg font-bold dark:text-white">{children}</h4>
+		<h4 className="text-base font-bold dark:text-white">{children}</h4>
 	),
 	h5: ({ children }) => (
-		<h5 className="text-base font-bold dark:text-white">{children}</h5>
+		<h5 className="text-sm font-bold dark:text-white">{children}</h5>
 	),
 	h6: ({ children }) => (
-		<h6 className="text-sm font-bold dark:text-white">{children}</h6>
+		<h6 className="text-xs font-bold dark:text-white">{children}</h6>
 	),
 	ul: ({ children }) => (
 		<ul className="ml-4 mt-4 list-disc dark:text-slate-300">{children}</ul>
@@ -33,7 +31,7 @@ export const mdxComponents: Components = {
 		</p>
 	),
 	em: ({ children }) => (
-		<em className="text-blue-500 dark:text-slate-300">{children}</em>
+		<em className="text-blue-500 dark:text-green-500">{children}</em>
 	),
 	blockquote: ({ children }) => (
 		<blockquote className="my-4 border-l-4 border-blue-500 bg-gray-100 px-4 py-3 dark:text-slate-300">

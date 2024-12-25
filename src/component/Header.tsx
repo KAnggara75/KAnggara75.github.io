@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 export default function Header() {
 	const html = document.querySelector("html");
@@ -35,14 +36,121 @@ export default function Header() {
 	let contactUrl = "/contact";
 	let portofolioUrl = "/portfolio";
 
-	if (window.location.pathname === "/") {
-		homeUrl = "#home";
-		blogUrl = "#blog";
-		aboutUrl = "#about";
-		clientUrl = "#client";
-		contactUrl = "#contact";
-		portofolioUrl = "#portfolio";
-	}
+	const getHeader = () => {
+		if (window.location.pathname === "/") {
+			homeUrl = "#home";
+			blogUrl = "#blog";
+			aboutUrl = "#about";
+			clientUrl = "#client";
+			contactUrl = "#contact";
+			portofolioUrl = "#portfolio";
+			return (
+				<>
+					<li className="group">
+						<a
+							href={homeUrl}
+							className="nav-menu"
+						>
+							Home
+						</a>
+					</li>
+					<li className="group">
+						<a
+							href={aboutUrl}
+							className="nav-menu"
+						>
+							About Me
+						</a>
+					</li>
+					<li className="group">
+						<a
+							href={portofolioUrl}
+							className="nav-menu"
+						>
+							Portfolio
+						</a>
+					</li>
+					<li className="group">
+						<a
+							href={clientUrl}
+							className="nav-menu"
+						>
+							Client
+						</a>
+					</li>
+					<li className="group">
+						<a
+							href={blogUrl}
+							className="nav-menu"
+						>
+							Blog
+						</a>
+					</li>
+					<li className="group">
+						<a
+							href={contactUrl}
+							className="nav-menu"
+						>
+							Contact
+						</a>
+					</li>
+				</>
+			);
+		} else {
+			return (
+				<>
+					<li className="group">
+						<Link
+							to={homeUrl}
+							className="nav-menu"
+						>
+							Home
+						</Link>
+					</li>
+					<li className="group">
+						<Link
+							to={aboutUrl}
+							className="nav-menu"
+						>
+							About Me
+						</Link>
+					</li>
+					<li className="group">
+						<Link
+							to={portofolioUrl}
+							className="nav-menu"
+						>
+							Portfolio
+						</Link>
+					</li>
+					<li className="group">
+						<Link
+							to={clientUrl}
+							className="nav-menu"
+						>
+							Client
+						</Link>
+					</li>
+					<li className="group">
+						<Link
+							to={blogUrl}
+							className="nav-menu"
+						>
+							Blog
+						</Link>
+					</li>
+					<li className="group">
+						<Link
+							to={contactUrl}
+							className="nav-menu"
+						>
+							Contact
+						</Link>
+					</li>
+				</>
+			);
+		}
+	};
 
 	// Sticky Menu Area
 	useEffect(() => {
@@ -63,12 +171,12 @@ export default function Header() {
 			<div className="container">
 				<div className="relative flex items-center justify-between">
 					<div className="px-4">
-						<a
-							href="/"
+						<Link
+							to="/"
 							className="block py-4 text-lg font-bold text-primary"
 						>
 							Kelvin Anggara
-						</a>
+						</Link>
 					</div>
 					<div className="flex items-center px-3">
 						<button
@@ -89,54 +197,7 @@ export default function Header() {
 							className="absolute right-4 top-full hidden w-full max-w-[250px] rounded-xl bg-slate-200 py-2 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
 						>
 							<ul className="block lg:flex">
-								<li className="group">
-									<a
-										href={homeUrl}
-										className="nav-menu"
-									>
-										Home
-									</a>
-								</li>
-								<li className="group">
-									<a
-										href={aboutUrl}
-										className="nav-menu"
-									>
-										About Me
-									</a>
-								</li>
-								<li className="group">
-									<a
-										href={portofolioUrl}
-										className="nav-menu"
-									>
-										Portfolio
-									</a>
-								</li>
-								<li className="group">
-									<a
-										href={clientUrl}
-										className="nav-menu"
-									>
-										Client
-									</a>
-								</li>
-								<li className="group">
-									<a
-										href={blogUrl}
-										className="nav-menu"
-									>
-										Blog
-									</a>
-								</li>
-								<li className="group">
-									<a
-										href={contactUrl}
-										className="nav-menu"
-									>
-										Contact
-									</a>
-								</li>
+								{getHeader()}
 								<li className="mt-3 lg:mt-1">
 									<div className="mx-3 flex flex-col justify-center">
 										<input

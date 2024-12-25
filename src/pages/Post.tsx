@@ -55,9 +55,35 @@ export default function Post() {
 		return (
 			<>
 				<Header />
-				<div className="gb-white px-10 py-16 dark:bg-dark">
+				<article className="gb-white px-10 pb-16 pt-28 dark:bg-dark">
+					<div
+						className=""
+						id="articleHeader"
+					>
+						<div className="tags mb-1 text-xs">
+							{articleInfo?.tags.map((tag) => (
+								<Link
+									className="mx-1 mb-2 inline-block rounded-full border border-s px-1 lowercase leading-5 text-secondary dark:text-slate-300"
+									key={tag}
+									to={"/tags/" + tag}
+								>
+									{tag.substring(0, 10)}
+								</Link>
+							))}
+						</div>
+						<h1 className="mb-2 text-2xl font-bold capitalize dark:text-white md:text-4xl">
+							{articleInfo?.title}
+						</h1>
+						<h2 className="-mt-1 font-sans text-base font-normal capitalize leading-normal dark:text-slate-200 md:text-xl">
+							{articleInfo?.subtitle}
+						</h2>
+						<span className="block text-xs font-light italic leading-[1.1] text-secondary md:text-sm">
+							Posted by {articleInfo?.author} on {posteOn}
+						</span>
+						<hr className="my-6" />
+					</div>
 					<ReactMarkdown components={mdxComponents}>{content}</ReactMarkdown>
-				</div>
+				</article>
 				<BackToTop />
 			</>
 		);

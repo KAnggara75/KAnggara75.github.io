@@ -25,7 +25,7 @@ export default function Footer() {
 						<ul className="text-slate-300">
 							<li>
 								<a
-									href="#"
+									href="tags/programming"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Programing
@@ -33,7 +33,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<a
-									href="#"
+									href="tags/programming"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Teknologi
@@ -41,7 +41,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<a
-									href="#"
+									href="tags/programming"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Tips & Trik

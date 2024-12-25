@@ -34,10 +34,10 @@ export default function PostThumb({
 					<p className="mb-4 text-base font-medium text-secondary">
 						{subtitle}
 					</p>
-					<div className="hidden grid-cols-4 sm:grid">
+					<div className="tags hidden sm:block">
 						{tags.map((tag) => (
 							<a
-								className="m-1 rounded-lg border border-transparent bg-green-600 px-2.5 py-0.5 text-sm text-white shadow-sm transition-all hover:bg-blue-600 dark:bg-amber-200 dark:text-dark hover:dark:bg-blue-600 hover:dark:text-white"
+								className="mx-1 mb-2 inline-block rounded-full border border-s px-2 leading-6 text-secondary dark:text-slate-300"
 								key={tag}
 								href={"tags/" + tag}
 							>
@@ -47,7 +47,7 @@ export default function PostThumb({
 					</div>
 					<a
 						href={href}
-						className="mt-3 block rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80"
+						className="mt-6 block rounded-xl bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80"
 					>
 						Baca Selengkapnya
 					</a>

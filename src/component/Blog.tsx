@@ -25,7 +25,6 @@ export default function Blog() {
 				return response.json();
 			})
 			.then((data) => {
-				console.info(data);
 				setData(data);
 			})
 			.catch((e: Error) => {

@@ -54,6 +54,7 @@ export default function Post() {
 	} else {
 		return (
 			<>
+				<title>Blog | Kelvin Anggara</title>
 				<Header />
 				<article className="bg-slate-200 px-10 pb-16 pt-28 dark:bg-dark">
 					<div

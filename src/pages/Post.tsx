@@ -17,11 +17,12 @@ export default function Post() {
 	useEffect(() => {
 		console.info("/pages/" + yyyy + "/" + mm + "/" + url + ".md");
 		console.info(params);
-		fetch("/pages/" + url + ".md")
+		fetch("/pages/" + yyyy + "/" + mm + "/" + url + ".md")
 			.then((response) => {
 				return response.text();
 			})
 			.then((text) => {
+				console.info(text);
 				setContent(text);
 			})
 			.catch((error) => {

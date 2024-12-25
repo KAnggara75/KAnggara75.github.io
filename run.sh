@@ -31,7 +31,8 @@ get_all_file() {
 		sed '1,8d' $file >../public/pages/$YYYY/$MM/$DD-$name
 
 		# pharse from md file
-		url=$(echo "$filename" | sed "s/\.md//g")
+		src=$(echo "pages/$YYYY/$MM/$DD-$name")
+		url=$(echo "post/$YYYY/$MM/$DD-$name" | sed "s/\.md//g")
 		title=$(sed -n '/title:/I{p;q;}' $file | sed "s/title: //g")
 		tags=$(sed -n '/tags:/I{p;q;}' $file | sed "s/tags: \[//g" | sed 's/\]//g' | sed 's/, /","/g' | sed 's/^/["/' | sed 's/$/"]/')
 		subtitle=$(sed -n '/subtitle:/I{p;q;}' $file | sed "s/subtitle: //g")
@@ -42,21 +43,21 @@ get_all_file() {
 		echo -e "\t\t{" >>$INDEX
 		echo -e "\t\t\t\"title\": \"$title\"," >>$INDEX
 		echo -e "\t\t\t\"subtitle\": \"$subtitle\"," >>$INDEX
-		echo -e "\t\t\t\"tags\": $tags," >>$INDEX
-		echo -e "\t\t\t\"source\": \"$source\"," >>$INDEX
 		echo -e "\t\t\t\"author\": \"$author\"," >>$INDEX
-		echo -e "\t\t\t\"url\": \"post/$url\"," >>$INDEX
-		echo -e "\t\t\t\"src\": \"pages/$filename\"," >>$INDEX
+		echo -e "\t\t\t\"source\": \"$source\"," >>$INDEX
+		echo -e "\t\t\t\"url\": \"$url\"," >>$INDEX
+		echo -e "\t\t\t\"src\": \"$src\"," >>$INDEX
 
 		if [ -e "$PUBLIC_IMG/$url.jpeg" ]; then
-			echo -e "\t\t\t\"img\": \"img/$url.jpeg\"" >>$INDEX
+			echo -e "\t\t\t\"img\": \"img/$url.jpeg\"," >>$INDEX
 		elif [ -e "$PUBLIC_IMG/$url.jpg" ]; then
-			echo -e "\t\t\t\"img\": \"img/$url.jpg\"" >>$INDEX
+			echo -e "\t\t\t\"img\": \"img/$url.jpg\"," >>$INDEX
 		elif [ -e "$PUBLIC_IMG/$url.png" ]; then
-			echo -e "\t\t\t\"img\": \"img/$url.png\"" >>$INDEX
+			echo -e "\t\t\t\"img\": \"img/$url.png\"," >>$INDEX
 		else
-			echo -e "\t\t\t\"img\": \"img/default.jpeg\"" >>$INDEX
+			echo -e "\t\t\t\"img\": \"img/default.jpeg\"," >>$INDEX
 		fi
+		echo -e "\t\t\t\"tags\": $tags" >>$INDEX
 
 		echo -e "\t\t}," >>$INDEX
 	done

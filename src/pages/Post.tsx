@@ -10,19 +10,16 @@ export default function Post() {
 	const params = useParams();
 	const [content, setContent] = useState("");
 
-	const url = params.postId ? params.postId : "kanggara75";
-	const yyyy = params.yyyy ? params.yyyy : "2022";
 	const mm = params.mm ? params.mm : "01";
+	const yyyy = params.yyyy ? params.yyyy : "2022";
+	const url = params.postId ? params.postId : "kanggara75";
 
 	useEffect(() => {
-		console.info("/pages/" + yyyy + "/" + mm + "/" + url + ".md");
-		console.info(params);
 		fetch("/pages/" + yyyy + "/" + mm + "/" + url + ".md")
 			.then((response) => {
 				return response.text();
 			})
 			.then((text) => {
-				console.info(text);
 				setContent(text);
 			})
 			.catch((error) => {

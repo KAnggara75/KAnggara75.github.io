@@ -35,19 +35,15 @@ export default function Blog() {
 	return (
 		<section
 			id="blog"
-			className="bg-slate-100 py-24 dark:bg-dark"
+			className="bg-slate-100 py-20 dark:bg-dark"
 		>
 			<div className="container">
 				<div className="w-full px-4">
 					<div className="mx-auto mb-16 text-center">
 						<h4 className="mb-2 text-lg font-semibold text-primary">Blog</h4>
-						<h2 className="mb-4 text-3xl font-bold text-dark dark:text-slate-100 sm:text-4xl lg:text-5xl">
+						<h2 className="mb-2 text-3xl font-bold text-dark dark:text-slate-100 sm:text-4xl lg:text-5xl">
 							Tulisan Terkini
 						</h2>
-						<p className="text-md font-medium text-secondary md:text-lg">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, consequatur. Non, harum autem.
-						</p>
 					</div>
 				</div>
 				<div className="flex flex-wrap">

@@ -47,6 +47,7 @@ get_all_file() {
 		echo -e "\t\t\t\"source\": \"$source\"," >>$INDEX
 		echo -e "\t\t\t\"url\": \"$url\"," >>$INDEX
 		echo -e "\t\t\t\"src\": \"$src\"," >>$INDEX
+		echo -e "\t\t\t\"postOn\": \"$YYYY-$MM-$DD\"," >>$INDEX
 
 		if [ -e "$PUBLIC_IMG/$url.jpeg" ]; then
 			echo -e "\t\t\t\"img\": \"img/$url.jpeg\"," >>$INDEX

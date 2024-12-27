@@ -64,7 +64,7 @@ export default function Post() {
 						<div className="tags mb-1 text-xs">
 							{articleInfo?.tags.map((tag) => (
 								<Link
-									className="mx-1 mb-2 inline-block rounded-full border border-s px-1 lowercase leading-5 text-secondary dark:text-slate-300"
+									className="mx-1 mb-2 inline-block rounded-full border border-s border-slate-500 bg-slate-100 px-1 py-0 lowercase leading-5 text-secondary dark:bg-dark dark:text-slate-300"
 									key={tag}
 									to={"/tags/" + tag}
 								>

@@ -2,7 +2,7 @@ export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="py-24 dark:bg-slate-800"
+			className="py-20 dark:bg-slate-800"
 		>
 			<div className="container">
 				<div className="w-full px-4">
@@ -12,8 +12,7 @@ export default function Contact() {
 							Hubungi Saya
 						</h2>
 						<p className="text-md font-medium text-secondary md:text-lg">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, consequatur. Non, harum autem.
+							Anda dapat menghubungi saya melalui form berikut ini
 						</p>
 					</div>
 				</div>
@@ -31,7 +30,7 @@ export default function Contact() {
 								type="text"
 								name="name"
 								id="name"
-								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+								className="w-full rounded-xl bg-slate-100 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
 							/>
 						</div>
 						<div className="mb-8 w-full px-4">
@@ -45,7 +44,7 @@ export default function Contact() {
 								type="text"
 								name="email"
 								id="email"
-								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+								className="w-full rounded-xl bg-slate-100 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
 							/>
 						</div>
 						<div className="mb-8 w-full px-4">
@@ -58,7 +57,7 @@ export default function Contact() {
 							<textarea
 								name="msg"
 								id="msg"
-								className="h-30 w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+								className="h-30 w-full rounded-xl bg-slate-100 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
 							></textarea>
 						</div>
 						<div className="w-full px-4">

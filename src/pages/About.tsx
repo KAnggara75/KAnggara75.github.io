@@ -1,4 +1,4 @@
-import Blog from "../component/Blog";
+import Blog from "./Blog";
 
 export default function About() {
 	return <Blog />;

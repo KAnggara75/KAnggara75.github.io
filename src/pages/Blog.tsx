@@ -31,11 +31,11 @@ export default function Blog() {
 					{data?.pages
 						.reverse()
 						.reverse()
-						.map((post) => (
+						.map((post, i) => (
 							<PostThumb
-								key={post.url}
+								key={post.url + "-" + i}
 								title={post.title}
-								href={post.url}
+								href={"/" + post.url}
 								img={post.img}
 								src={post.src}
 								subtitle={post.subtitle}

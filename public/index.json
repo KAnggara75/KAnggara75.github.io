@@ -50,6 +50,25 @@
 				"dao",
 				"governance"
 			]
+		},
+		{
+			"title": "Pengenalan Object-Oriented Programming (OOP)",
+			"subtitle": "Object-Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek dan data, bukan fungsi dan logika",
+			"author": "Kelvin Anggara",
+			"source": "https://graymirror.substack.com/p/the-blockchain-and-the-whitechain",
+			"url": "post/2024/12/26-OOP",
+			"src": "pages/2024/12/26-OOP.md",
+			"postOn": "2024-12-26",
+			"img": "img/default.jpeg",
+			"tags": [
+				"java",
+				"oop",
+				"programing",
+				"Encapsulation",
+				"Abstraction",
+				"Inheritance",
+				"Polymorphism"
+			]
 		}
 	]
 }

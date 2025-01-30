@@ -24,7 +24,7 @@
 	"dependencies": {
 		"@react-router/node": "^7.1.1",
 		"@react-router/serve": "^7.1.1",
-		"glob": "^11.0.0",
+		"glob": "^11.0.1",
 		"path": "^0.12.7",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",

@@ -9,8 +9,7 @@ MM=01
 DD=24
 
 abort() {
-	echo $platform
-	echo "$@"
+	echo "ERROR! => $@"
 	exit 1
 }
 
@@ -26,11 +25,18 @@ get_all_file() {
 		mkdir -p ../public/pages/$YYYY
 		mkdir -p ../public/pages/$YYYY/$MM
 
+		if [[ $(head -n 1 "$file") != "---" ]]; then
+			# Remove coma symbol on last line
+			sed -i='' -e '$s/,$//' "$INDEX"
+			echo "WARN: Invalid Header for $filename"
+			break
+		fi
+
 		# copy md file to public
 		# remofe line 1 to 8
 		sed '1,8d' $file >../public/pages/$YYYY/$MM/$DD-$name
 
-		# pharse from md file
+		# parse variable from md file
 		src=$(echo "pages/$YYYY/$MM/$DD-$name")
 		url=$(echo "post/$YYYY/$MM/$DD-$name" | sed "s/\.md//g")
 		title=$(sed -n '/title:/I{p;q;}' $file | sed "s/title: //g")
@@ -38,6 +44,12 @@ get_all_file() {
 		subtitle=$(sed -n '/subtitle:/I{p;q;}' $file | sed "s/subtitle: //g")
 		source=$(sed -n '/source:/I{p;q;}' $file | sed "s/source: //g")
 		author=$(sed -n '/author:/I{p;q;}' $file | sed "s/author: //g")
+
+		if [ -z "$tags" ]; then
+			sed -i='' -e '$s/,$//' "$INDEX"
+			echo "WARN: Tag for $filename Empty"
+			break
+		fi
 
 		# Write to file
 		echo -e "\t\t{" >>$INDEX
@@ -58,6 +70,7 @@ get_all_file() {
 		else
 			echo -e "\t\t\t\"img\": \"img/default.jpeg\"," >>$INDEX
 		fi
+
 		echo -e "\t\t\t\"tags\": $tags" >>$INDEX
 
 		echo -e "\t\t}," >>$INDEX

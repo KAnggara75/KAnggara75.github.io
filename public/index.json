@@ -50,6 +50,50 @@
 				"dao",
 				"governance"
 			]
+		},
+		{
+			"title": "DevOps: Install Helm",
+			"subtitle": "This guide shows how to install the Helm CLI.",
+			"author": "Kelvin Anggara",
+			"source": "https://helm.sh/docs/intro/install",
+			"url": "post/2025/02/01-helm",
+			"src": "pages/2025/02/01-helm.md",
+			"postOn": "2025-02-01",
+			"img": "img/default.jpeg",
+			"tags": ["Kubernetes", "cluster", "linux", "DevOps"]
+		},
+		{
+			"title": "Install Proxmox VE on Debian 12 Bookworm",
+			"subtitle": "This guide shows how to install the Helm CLI.",
+			"author": "Kelvin Anggara",
+			"source": "https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm",
+			"url": "post/2025/02/05-proxmox",
+			"src": "pages/2025/02/05-proxmox.md",
+			"postOn": "2025-02-05",
+			"img": "img/default.jpeg",
+			"tags": ["Kubernetes", "cluster", "linux", "DevOps"]
+		},
+		{
+			"title": "How to Install K3s in Ubuntu",
+			"subtitle": "This guide shows how to install the Helm CLI.",
+			"author": "Kelvin Anggara",
+			"source": "https://docs.k3s.io/installation",
+			"url": "post/2025/02/07-k3s",
+			"src": "pages/2025/02/07-k3s.md",
+			"postOn": "2025-02-07",
+			"img": "img/default.jpeg",
+			"tags": ["Kubernetes", "cluster", "linux", "DevOps", "k8s", "k3s"]
+		},
+		{
+			"title": "K3s Config",
+			"subtitle": "This guide shows how to install the Helm CLI.",
+			"author": "Kelvin Anggara",
+			"source": "https://docs.k3s.io/installation",
+			"url": "post/2025/02/08-k3s-config",
+			"src": "pages/2025/02/08-k3s-config.md",
+			"postOn": "2025-02-08",
+			"img": "img/default.jpeg",
+			"tags": ["Kubernetes", "cluster", "linux", "DevOps", "k8s", "k3s"]
 		}
 	]
 }

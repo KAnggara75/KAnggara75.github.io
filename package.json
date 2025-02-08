@@ -18,6 +18,7 @@
 	"homepage": "https://kanggara.my.id",
 	"scripts": {
 		"dev": "./run.sh && vite",
+		"start": "pnpm fc && vite",
 		"build": "pnpm fc && tsc -b && vite build",
 		"fc": "pnpm prettier --write . && pnpm eslint --fix . && pnpm prettier --check . && pnpm eslint ."
 	},

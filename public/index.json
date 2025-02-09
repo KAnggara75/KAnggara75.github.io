@@ -9,13 +9,7 @@
 			"src": "pages/2022/01/24-kanggara75.md",
 			"postOn": "2022-01-24",
 			"img": "img/default.jpeg",
-			"tags": [
-				"ethereum",
-				"blockchain",
-				"distributed computing",
-				"dao",
-				"governance"
-			]
+			"tags": ["ethereum","blockchain","distributed computing","dao","governance"]
 		},
 		{
 			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
@@ -26,13 +20,7 @@
 			"src": "pages/2023/01/24-react-typescript-vite.md",
 			"postOn": "2023-01-24",
 			"img": "img/default.jpeg",
-			"tags": [
-				"ethereum",
-				"blockchain",
-				"distributed computing",
-				"dao",
-				"governance"
-			]
+			"tags": ["ethereum","blockchain","distributed computing","dao","governance"]
 		},
 		{
 			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
@@ -43,13 +31,7 @@
 			"src": "pages/2024/01/24-react-typescript-vite2.md",
 			"postOn": "2024-01-24",
 			"img": "img/default.jpeg",
-			"tags": [
-				"ethereum",
-				"blockchain",
-				"distributed computing",
-				"dao",
-				"governance"
-			]
+			"tags": ["ethereum","blockchain","distributed computing","dao","governance"]
 		},
 		{
 			"title": "DevOps: Install Helm",
@@ -60,7 +42,7 @@
 			"src": "pages/2025/02/01-helm.md",
 			"postOn": "2025-02-01",
 			"img": "img/default.jpeg",
-			"tags": ["Kubernetes", "cluster", "linux", "DevOps"]
+			"tags": ["Kubernetes","cluster","linux","DevOps"]
 		},
 		{
 			"title": "Install Proxmox VE on Debian 12 Bookworm",
@@ -71,7 +53,7 @@
 			"src": "pages/2025/02/05-proxmox.md",
 			"postOn": "2025-02-05",
 			"img": "img/default.jpeg",
-			"tags": ["Kubernetes", "cluster", "linux", "DevOps"]
+			"tags": ["Kubernetes","cluster","linux","DevOps"]
 		},
 		{
 			"title": "How to Install K3s in Ubuntu",
@@ -82,7 +64,7 @@
 			"src": "pages/2025/02/07-k3s.md",
 			"postOn": "2025-02-07",
 			"img": "img/default.jpeg",
-			"tags": ["Kubernetes", "cluster", "linux", "DevOps", "k8s", "k3s"]
+			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		},
 		{
 			"title": "K3s Config",
@@ -93,7 +75,18 @@
 			"src": "pages/2025/02/08-k3s-config.md",
 			"postOn": "2025-02-08",
 			"img": "img/default.jpeg",
-			"tags": ["Kubernetes", "cluster", "linux", "DevOps", "k8s", "k3s"]
+			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
+		},
+		{
+			"title": "K3s/K8s Ingress Configuration",
+			"subtitle": "This guide shows how to config ingress k8s/k3s.",
+			"author": "Kelvin Anggara",
+			"source": "https://docs.k3s.io/installation",
+			"url": "post/2025/02/09-k8s-ingress",
+			"src": "pages/2025/02/09-k8s-ingress.md",
+			"postOn": "2025-02-09",
+			"img": "img/default.jpeg",
+			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		}
 	]
 }

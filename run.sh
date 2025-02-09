@@ -75,6 +75,7 @@ get_all_file() {
 
 		echo -e "\t\t}," >>$INDEX
 	done
+	sed -i='' -e '$s/,$//' "$INDEX"
 	echo -e "\t]\n}" >>$INDEX
 }
 

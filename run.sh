@@ -84,6 +84,7 @@ main() {
 	mkdir public/pages
 	cd $WORK_DIR/pages
 	get_all_file
+	rm $INDEX=
 	pnpm fc
 }
 

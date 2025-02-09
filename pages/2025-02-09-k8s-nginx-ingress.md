@@ -1,16 +1,12 @@
 ---
-title: K3s/K8s Ingress Configuration
+title: K3s/K8s Nginx Ingress Configuration
 subtitle: This guide shows how to config ingress k8s/k3s.
 tags: [Kubernetes, cluster, linux, DevOps, k8s, k3s]
 source: https://docs.k3s.io/installation
 author: Kelvin Anggara
 ---
 
-# Config K3s
-
-- [ ] knln
-
->
+# Config K8s Nginx Ingress
 
 ## Install Helm
 
@@ -23,91 +19,30 @@ sudo apt update
 sudo apt install helm
 ```
 
-## Install MetalLb
-
-```bash
-helm repo add metallb https://metallb.github.io/metallb
-```
-
-with value.yaml
-
-```bash
-helm pull metallb/metallb
-tar -zxvf metallb-*.tgz
-cd metallb
-helm install metallb -f values.yaml . -n metallb-system --debug --create-namespace
-```
-
-Direcly install
-
-```bash
-helm install metallb metallb/metallb --namespace metallb-system --debug  --create-namespace
-```
-
-### Defining the IPs to assign to the Load Balancer services
-
-`vi ipaddresspool.yaml`
-
-```yaml
-apiVersion: metallb.io/v1beta1
-kind: IPAddressPool
-metadata:
-  name: default-pool
-  namespace: metallb-system
-spec:
-  addresses:
-    - 185.201.9.248/24
-    - 2a02:4780:e:5fc7::1/48
-```
-
-```bash
-kubectl apply -f ipaddresspool.yaml
-```
-
-### Limiting the set of nodes where the service can be announced from
-
-`vi L2Advertisement.yaml`
-
-```yaml
-apiVersion: metallb.io/v1beta1
-kind: L2Advertisement
-metadata:
-  name: default
-  namespace: metallb-system
-spec:
-  ipAddressPools:
-    - default-pool
-```
-
-```bash
-kubectl apply -f L2Advertisement.yaml
-```
-
-### Test Load Balance
-
-```bash
-kubectl run app-demo-1 --image=nginx --port=80
-kubectl expose pod app-demo-1 --type=LoadBalancer --target-port=80 --port=80 --name app-demo-1
-```
-
 ## Install Nginx-Ingress
 
+[stackoverflow](https://stackoverflow.com/questions/71181517/cert-manager-remote-error-tls-unrecognized-name-errors)
+
 ```bash
-helm repo add nginx-stable https://helm.nginx.com/stable
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
+
+helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx -n ingress --create-namespace --timeout 600s --set controller.publishService.enabled=true --debug
 ```
 
 ```bash
-helm pull nginx-stable/nginx-ingress
-tar -zxvf nginx-ingress-*.tgz
-cd nginx-ingress
+helm pull ingress-nginx/ingress-nginx
+tar -zxvf ingress-nginx-*.tgz
+cd ingress-nginx
 vi values.yaml
 ```
 
-change `setAsDefaultIngress: true`
+change `controller.service.externalIPs: [XXX.XXX.XXX.XXX]` with your public IP
 
 ```bash
-helm install nginx-ingress -f values.yaml . -n ingress --debug --create-namespace
+helm upgrade --install ingress-nginx -f values.yaml . -n ingress --create-namespace --timeout 600s --set controller.publishService.enabled=true --debug
+
+helm upgrade --install nginx-ingress -f values.yaml . -n ingress --debug --create-namespace
 ```
 
 ### Test Ingress

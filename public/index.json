@@ -57,9 +57,9 @@
 		},
 		{
 			"title": "K3s/K8s Ingress TLS",
-			"subtitle": "This guide shows how to config ingress k8s/k3s.",
+			"subtitle": "Menggunakan Let's Encrypt + Cert-Manager untuk Sertifikat Otomatis di K3s/K8s",
 			"author": "Kelvin Anggara",
-			"source": "https://docs.k3s.io/installation",
+			"source": "https://cert-manager.io/docs/installation/helm/",
 			"url": "post/2025/02/09-k8s-ingress-tls",
 			"src": "pages/2025/02/09-k8s-ingress-tls.md",
 			"postOn": "2025-02-09",
@@ -76,6 +76,17 @@
 			"postOn": "2025-02-09",
 			"img": "img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
+		},
+		{
+			"title": "Setup Server",
+			"subtitle": "Linux Server Setup",
+			"author": "Kelvin Anggara",
+			"source": "https://kanggara.my.id",
+			"url": "post/2025/02/24-server-setup",
+			"src": "pages/2025/02/24-server-setup.md",
+			"postOn": "2025-02-24",
+			"img": "img/default.jpeg",
+			"tags": ["linux","vps","debian","ubuntu"]
 		}
 	]
 }

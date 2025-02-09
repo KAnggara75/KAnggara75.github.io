@@ -1,37 +1,15 @@
 {
 	"pages": [
 		{
-			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
-			"subtitle": "Sumber Energi Ramah Lingkungan",
+			"title": "KAnggara75",
+			"subtitle": "Hallo Semuanya",
 			"author": "Kelvin Anggara",
-			"source": "https://graymirror.substack.com/p/the-blockchain-and-the-whitechain",
+			"source": "https://kanggara.my.id",
 			"url": "post/2022/01/24-kanggara75",
 			"src": "pages/2022/01/24-kanggara75.md",
 			"postOn": "2022-01-24",
 			"img": "img/default.jpeg",
-			"tags": ["ethereum","blockchain","distributed computing","dao","governance"]
-		},
-		{
-			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
-			"subtitle": "Sumber Energi Ramah Lingkungan",
-			"author": "Kelvin Anggara",
-			"source": "https://graymirror.substack.com/p/the-blockchain-and-the-whitechain",
-			"url": "post/2023/01/24-react-typescript-vite",
-			"src": "pages/2023/01/24-react-typescript-vite.md",
-			"postOn": "2023-01-24",
-			"img": "img/default.jpeg",
-			"tags": ["ethereum","blockchain","distributed computing","dao","governance"]
-		},
-		{
-			"title": "Panel Surya: Sumber Energi Ramah Lingkungan",
-			"subtitle": "Sumber Energi Ramah Lingkungan",
-			"author": "Kelvin Anggara",
-			"source": "https://graymirror.substack.com/p/the-blockchain-and-the-whitechain",
-			"url": "post/2024/01/24-react-typescript-vite2",
-			"src": "pages/2024/01/24-react-typescript-vite2.md",
-			"postOn": "2024-01-24",
-			"img": "img/default.jpeg",
-			"tags": ["ethereum","blockchain","distributed computing","dao","governance"]
+			"tags": ["about"]
 		},
 		{
 			"title": "DevOps: Install Helm",
@@ -74,6 +52,17 @@
 			"url": "post/2025/02/08-k3s-config",
 			"src": "pages/2025/02/08-k3s-config.md",
 			"postOn": "2025-02-08",
+			"img": "img/default.jpeg",
+			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
+		},
+		{
+			"title": "K3s/K8s Ingress TLS",
+			"subtitle": "This guide shows how to config ingress k8s/k3s.",
+			"author": "Kelvin Anggara",
+			"source": "https://docs.k3s.io/installation",
+			"url": "post/2025/02/09-k8s-ingress-tls",
+			"src": "pages/2025/02/09-k8s-ingress-tls.md",
+			"postOn": "2025-02-09",
 			"img": "img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		},

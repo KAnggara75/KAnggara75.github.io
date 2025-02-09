@@ -52,8 +52,7 @@ export default function Blog() {
 				</div>
 				<div className="flex flex-wrap">
 					{data?.pages
-						.reverse()
-						.slice(0, 6)
+						.slice(-6)
 						.reverse()
 						.map((post) => (
 							<PostThumb

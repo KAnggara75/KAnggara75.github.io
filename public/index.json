@@ -45,7 +45,7 @@
 			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		},
 		{
-			"title": "K3s Config",
+			"title": "K8s Config",
 			"subtitle": "This guide shows how to install the Helm CLI.",
 			"author": "Kelvin Anggara",
 			"source": "https://docs.k3s.io/installation",

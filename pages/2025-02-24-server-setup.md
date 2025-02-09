@@ -25,3 +25,10 @@ author: Kelvin Anggara
 ```sh
 /bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/KAnggara75/f1f6e6a951680119eef607ee7eecc52f/raw/e2b50daeb18b88dff81552b50218803262dda44f/change_ssh_port.sh)"
 ```
+
+## Instal dotfile
+
+```sh
+sudo apt install zsh -y
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/KAnggara75/dotfile/main/install.sh)"
+```

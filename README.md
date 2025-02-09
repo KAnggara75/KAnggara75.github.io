@@ -48,3 +48,8 @@ export default tseslint.config({
 	},
 });
 ```
+
+```bash
+pnpm add @react-router/node @react-router/serve glob path react react-dom react-markdown react-router react-router-dom react-syntax-highlighter
+pnpm add -D @eslint/js @react-router/dev @types/node @types/react @types/react-dom @types/react-router-dom @types/react-syntax-highlighter @vitejs/plugin-react-swc autoprefixer eslint eslint-plugin-react-hooks eslint-plugin-react-refresh globals postcss prettier prettier-plugin-tailwindcss tailwindcss typescript typescript-eslint vite
+```

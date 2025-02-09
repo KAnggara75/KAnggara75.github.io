@@ -25,3 +25,5 @@ public/pages
 *.sln
 *.sw?
 index.json*
+Rating.tsx
+Firestore.tsx

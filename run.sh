@@ -85,7 +85,6 @@ main() {
 	cd $WORK_DIR/pages
 	get_all_file
 	rm $INDEX=
-	pnpm fc
 }
 
 main || abort "Compose Error!"

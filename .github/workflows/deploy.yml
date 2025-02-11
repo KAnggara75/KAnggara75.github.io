@@ -47,4 +47,4 @@ jobs:
     needs: [deploy]
     steps:
       - name: Test deployed file
-        run: pwd && ls -ls && ./test.sh
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/KAnggara75/KAnggara75.github.io/main/test.sh)"

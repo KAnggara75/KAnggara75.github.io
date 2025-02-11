@@ -44,7 +44,7 @@ jobs:
     environment:
       name: testing
     runs-on: ubuntu-24.04
-    needs: [deploys]
+    needs: [deploy]
     steps:
       - name: Test deployed file
         run: pwd && ls -ls && ./test.sh

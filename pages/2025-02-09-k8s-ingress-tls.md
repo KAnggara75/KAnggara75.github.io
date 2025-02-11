@@ -36,7 +36,7 @@ Buat file `issuer.yaml` untuk Let's Encrypt:
 
 ### Nginx Ingress
 
-```sh
+```yaml
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:

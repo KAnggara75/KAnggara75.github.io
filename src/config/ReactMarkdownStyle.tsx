@@ -1,6 +1,6 @@
 import { Components } from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import vscDarkPlus from "react-syntax-highlighter/dist/esm/styles/prism/vsc-dark-plus";
 
 export const mdxComponents: Components = {
 	h1: ({ children }) => <h1 className="hidden">{children}</h1>,
@@ -70,22 +70,20 @@ export const mdxComponents: Components = {
 			{children}
 		</th>
 	),
-	code({ className, children, ...rest }) {
-		const match = /language-(\w+)/.exec(className || "");
+	code({ className, children }) {
+		console.error(className);
+		console.info(children);
+		const match = /language-(\w+)/.exec(className ?? "");
 		return match ? (
 			<SyntaxHighlighter
-				PreTag="div"
 				language={match[1]}
+				PreTag="div"
 				style={vscDarkPlus}
-				{...rest}
 			>
-				{children}
+				{children as string}
 			</SyntaxHighlighter>
 		) : (
-			<code
-				{...rest}
-				className={className}
-			>
+			<code className="overflow-auto rounded-md bg-[#1e1e1e] px-[6px] py-[3px] font-mono text-sm italic text-white">
 				{children}
 			</code>
 		);

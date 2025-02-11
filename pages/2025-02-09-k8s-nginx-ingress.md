@@ -51,7 +51,7 @@ helm upgrade --install nginx-ingress -f values.yaml . -n ingress --debug --creat
 vim service-nginx-ingress.yaml
 ```
 
-```bash
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -67,10 +67,10 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
 ```
 
 Deploy the application in kubernetes using the `kubectl apply` command.
@@ -85,7 +85,7 @@ kubectl apply -f deploy-nginx.yaml
 vim nginx-with-ingress.yaml
 ```
 
-```bash
+```yaml
 replicaCount: 1
 namespace: sit
 

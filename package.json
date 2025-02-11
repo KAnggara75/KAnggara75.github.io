@@ -5,6 +5,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"module": "index.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/KAnggara75/KAnggara75.github.io.git"
@@ -18,9 +19,9 @@
 	"homepage": "https://kanggara.my.id",
 	"scripts": {
 		"dev": "./run.sh && vite",
-		"start": "pnpm fc && vite",
-		"build": "pnpm fc && tsc -b && vite build",
-		"fc": "pnpm prettier --write . && pnpm eslint --fix . && pnpm prettier --check . && pnpm eslint ."
+		"start": "bun fc && vite",
+		"build": "bun fc && tsc -b && vite build",
+		"fc": "bunx prettier --write . && bunx eslint --fix . && bunx prettier --check . && bunx eslint ."
 	},
 	"dependencies": {
 		"@react-router/node": "^7.1.5",
@@ -37,6 +38,7 @@
 	"devDependencies": {
 		"@eslint/js": "^9.20.0",
 		"@react-router/dev": "^7.1.5",
+		"@types/bun": "^1.2.2",
 		"@types/node": "^22.13.1",
 		"@types/react": "^19.0.8",
 		"@types/react-dom": "^19.0.3",
@@ -48,18 +50,14 @@
 		"eslint-plugin-react-hooks": "^5.1.0",
 		"eslint-plugin-react-refresh": "^0.4.19",
 		"globals": "^15.14.0",
-		"postcss": "^8.5.1",
+		"postcss": "^8.5.2",
 		"prettier": "^3.5.0",
 		"prettier-plugin-tailwindcss": "^0.6.11",
 		"tailwindcss": "3.4.17",
-		"typescript": "^5.7.3",
-		"typescript-eslint": "^8.23.0",
+		"typescript-eslint": "^8.24.0",
 		"vite": "^6.1.0"
 	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"@swc/core",
-			"esbuild"
-		]
+	"peerDependencies": {
+		"typescript": "^5.7.3"
 	}
 }

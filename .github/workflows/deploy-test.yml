@@ -1,0 +1,23 @@
+name: Deploy Pages 🚀
+
+on:
+  # Runs on pushes targeting the default branch
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - uses: oven-sh/setup-bun@v2
+      - name: Install dependencies
+        run: bun install
+      - name: Compose Markdown index
+        run: |
+          chmod +x run.sh
+          ./run.sh
+      - name: Build
+        run: bun run build

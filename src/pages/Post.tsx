@@ -55,7 +55,7 @@ export default function Post() {
 		return (
 			<>
 				<Header />
-				<article className="bg-slate-200 px-10 pb-16 pt-28 dark:bg-dark">
+				<article className="bg-slate-200 px-10 pt-28 pb-16 dark:bg-dark">
 					<div
 						className=""
 						id="articleHeader"
@@ -63,7 +63,7 @@ export default function Post() {
 						<div className="tags mb-1 text-xs">
 							{articleInfo?.tags.map((tag) => (
 								<Link
-									className="mx-1 mb-2 inline-block rounded-full border border-s px-1 lowercase leading-5 text-secondary dark:text-slate-300"
+									className="mx-1 mb-2 inline-block rounded-full border border-s px-1 leading-5 text-secondary lowercase dark:text-slate-300"
 									key={tag}
 									to={"/tags/" + tag}
 								>
@@ -71,13 +71,13 @@ export default function Post() {
 								</Link>
 							))}
 						</div>
-						<h1 className="mb-2 text-2xl font-bold capitalize dark:text-white md:text-4xl">
+						<h1 className="mb-2 text-2xl font-bold capitalize md:text-4xl dark:text-white">
 							{articleInfo?.title}
 						</h1>
-						<h2 className="-mt-1 font-sans text-base font-normal capitalize leading-normal dark:text-slate-200 md:text-xl">
+						<h2 className="-mt-1 font-sans text-base leading-normal font-normal capitalize md:text-xl dark:text-slate-200">
 							{articleInfo?.subtitle}
 						</h2>
-						<span className="block text-xs font-light italic leading-[1.1] text-secondary md:text-sm">
+						<span className="block text-xs leading-[1.1] font-light text-secondary italic md:text-sm">
 							Posted by {articleInfo?.author} on {posteOn}
 						</span>
 						<hr className="my-6" />

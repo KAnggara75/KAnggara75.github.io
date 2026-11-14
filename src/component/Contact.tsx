@@ -11,9 +11,10 @@ export default function Contact() {
 						<h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-slate-100">
 							Hubungi Saya
 						</h2>
-						<p className="text-md font-medium text-secondary md:text-lg">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, consequatur. Non, harum autem.
+						<p className="mx-auto max-w-xl text-base font-medium text-secondary md:text-lg dark:text-slate-300">
+							Tertarik untuk berkolaborasi, berdiskusi seputar arsitektur sistem
+							backend dan cloud-native, atau memiliki pertanyaan? Kirim pesan
+							langsung melalui formulir di bawah ini.
 						</p>
 					</div>
 				</div>
@@ -31,6 +32,7 @@ export default function Contact() {
 								type="text"
 								name="name"
 								id="name"
+								placeholder="Nama Anda"
 								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							/>
 						</div>
@@ -42,9 +44,10 @@ export default function Contact() {
 								E-Mail
 							</label>
 							<input
-								type="text"
+								type="email"
 								name="email"
 								id="email"
+								placeholder="email@domain.com"
 								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							/>
 						</div>
@@ -53,17 +56,22 @@ export default function Contact() {
 								htmlFor="msg"
 								className="text-base font-bold text-primary"
 							>
-								Nama
+								Pesan
 							</label>
 							<textarea
 								name="msg"
 								id="msg"
-								className="h-30 w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
+								rows={5}
+								placeholder="Tuliskan pesan Anda..."
+								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							></textarea>
 						</div>
 						<div className="w-full px-4">
-							<button className="w-full rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">
-								Kirim
+							<button
+								type="submit"
+								className="w-full rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg"
+							>
+								Kirim Pesan
 							</button>
 						</div>
 					</form>

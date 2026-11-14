@@ -31,17 +31,15 @@ export default function Header() {
 	let homeUrl = "/";
 	let blogUrl = "/blog";
 	let aboutUrl = "/about";
-	let clientUrl = "/client";
 	let contactUrl = "/contact";
-	let portofolioUrl = "/portfolio";
+	let projectsUrl = "/projects";
 
 	if (window.location.pathname === "/") {
 		homeUrl = "#home";
 		blogUrl = "#blog";
 		aboutUrl = "#about";
-		clientUrl = "#client";
 		contactUrl = "#contact";
-		portofolioUrl = "#portfolio";
+		projectsUrl = "#projects";
 	}
 
 	// Sticky Menu Area
@@ -102,23 +100,15 @@ export default function Header() {
 										href={aboutUrl}
 										className="nav-menu"
 									>
-										About Me
+										About
 									</a>
 								</li>
 								<li className="group">
 									<a
-										href={portofolioUrl}
+										href={projectsUrl}
 										className="nav-menu"
 									>
-										Portfolio
-									</a>
-								</li>
-								<li className="group">
-									<a
-										href={clientUrl}
-										className="nav-menu"
-									>
-										Client
+										Projects
 									</a>
 								</li>
 								<li className="group">

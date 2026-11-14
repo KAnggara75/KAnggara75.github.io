@@ -44,9 +44,9 @@ export default function Blog() {
 						<h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-slate-100">
 							Tulisan Terkini
 						</h2>
-						<p className="text-md font-medium text-secondary md:text-lg">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, consequatur. Non, harum autem.
+						<p className="mx-auto max-w-xl text-base font-medium text-secondary md:text-lg dark:text-slate-300">
+							Catatan teknis, dokumentasi arsitektur sistem, panduan Kubernetes,
+							dan eksplorasi rekayasa backend.
 						</p>
 					</div>
 				</div>

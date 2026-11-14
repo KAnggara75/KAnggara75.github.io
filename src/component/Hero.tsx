@@ -2,42 +2,52 @@ export default function Hero() {
 	return (
 		<section
 			id="home"
-			className="pt-36 dark:bg-dark"
+			className="pt-36 pb-16 dark:bg-dark"
 		>
 			<div className="container">
 				<div className="flex flex-wrap">
-					<div className="mb-10 w-full self-center px-4 lg:w-1/2">
+					<div className="mb-10 w-full self-center px-4 lg:w-7/12">
 						<h1 className="text-base font-semibold text-primary md:text-xl">
-							Hallo Semuanya,{" "}
+							Halo Semuanya,{" "}
 							<img
 								src="img/hi.gif"
 								alt="hi"
 								width="20px"
 								className="inline-block"
 							/>{" "}
-							Perkenalkan Saya
+							Saya
 							<span className="mt-1 block text-4xl font-bold text-dark lg:text-5xl dark:text-white">
 								Kelvin Anggara
 							</span>
 						</h1>
-						<h2 className="mb-5 text-lg font-medium text-secondary lg:text-2xl dark:text-slate-300">
-							<span className="text-dark dark:text-white">
-								Software Developer{" "}
-							</span>{" "}
-							| PHP-Java-Flutter-IoT
+						<h2 className="mt-2 text-xl font-bold text-dark lg:text-3xl dark:text-white">
+							Backend & Cloud-Native Engineer
 						</h2>
-						<p className="mb-10 leading-relaxed font-medium text-secondary dark:text-slate-300">
-							Saat ini sedang belajar Spring Boot, Laravel dan Flutter
-							Development.
+						<p className="mt-1 text-sm font-semibold tracking-wide text-primary lg:text-base">
+							Java (Quarkus) • Go • Apache Kafka • Kubernetes (K3s)
 						</p>
-						<a
-							href="#footer"
-							className="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-xl"
-						>
-							Hubungi Saya
-						</a>
+						<p className="mt-4 mb-8 leading-relaxed font-medium text-secondary lg:text-lg dark:text-slate-300">
+							Backend Developer yang berfokus pada sistem high-concurrency,
+							reliabilitas infrastruktur, dan clean architecture. Sehari-hari
+							bekerja dengan Go, Java/Quarkus, Kafka, dan Kubernetes untuk
+							memastikan sistem tetap stabil di bawah beban tinggi.
+						</p>
+						<div className="flex flex-wrap gap-4">
+							<a
+								href="#projects"
+								className="rounded-full bg-primary px-7 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-85 hover:shadow-lg"
+							>
+								Jelajahi Repositori
+							</a>
+							<a
+								href="#blog"
+								className="rounded-full border-2 border-primary bg-transparent px-7 py-3 text-base font-semibold text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white hover:shadow-lg dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-white"
+							>
+								Baca Artikel Teknis
+							</a>
+						</div>
 					</div>
-					<div className="w-full self-end px-4 lg:w-1/2">
+					<div className="w-full self-end px-4 lg:w-5/12">
 						<div className="relative mt-10 lg:right-0 lg:mt-0">
 							<img
 								src="img/hero.png"

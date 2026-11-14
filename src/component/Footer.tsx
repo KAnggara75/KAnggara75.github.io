@@ -25,26 +25,26 @@ export default function Footer() {
 						<ul className="text-slate-300">
 							<li>
 								<a
-									href="tags/programming"
+									href="tags/kubernetes"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
-									Programing
+									Kubernetes & K3s
 								</a>
 							</li>
 							<li>
 								<a
-									href="tags/programming"
+									href="tags/devops"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
-									Teknologi
+									DevOps & Cloud-Native
 								</a>
 							</li>
 							<li>
 								<a
-									href="tags/programming"
+									href="tags/linux"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
-									Tips & Trik
+									Linux & Infrastructure
 								</a>
 							</li>
 						</ul>
@@ -58,7 +58,7 @@ export default function Footer() {
 									href="#home"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
-									Beranda
+									Home
 								</a>
 							</li>
 							<li>
@@ -66,23 +66,15 @@ export default function Footer() {
 									href="#about"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
-									About Me
+									About
 								</a>
 							</li>
 							<li>
 								<a
-									href="#portfolio"
+									href="#projects"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
-									Portfolio
-								</a>
-							</li>
-							<li>
-								<a
-									href="#client"
-									className="mb-3 inline-block text-base hover:text-primary"
-								>
-									Client
+									Projects
 								</a>
 							</li>
 							<li>

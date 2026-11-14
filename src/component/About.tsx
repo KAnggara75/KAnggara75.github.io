@@ -15,10 +15,10 @@ export default function About() {
 			<div className="container">
 				<div className="flex flex-wrap">
 					<div className="mb-10 w-full px-4 lg:w-1/2">
-						<h4 className="mb-3 text-lg font-bold uppercase text-primary">
+						<h4 className="mb-3 text-lg font-bold text-primary uppercase">
 							Tentang Saya
 						</h4>
-						<h2 className="mb-5 max-w-md text-3xl font-bold text-dark dark:text-slate-100 lg:text-4xl">
+						<h2 className="mb-5 max-w-md text-3xl font-bold text-dark lg:text-4xl dark:text-slate-100">
 							Kunjungi Repo Saya
 						</h2>
 						<p className="max-w-xl text-base font-medium text-secondary lg:text-lg">
@@ -27,7 +27,7 @@ export default function About() {
 						</p>
 					</div>
 					<div className="w-full px-4 lg:w-1/2">
-						<h3 className="mb-4 text-2xl font-semibold text-dark dark:text-slate-100 lg:pt-10 lg:text-3xl">
+						<h3 className="mb-4 text-2xl font-semibold text-dark lg:pt-10 lg:text-3xl dark:text-slate-100">
 							Let's Connect!
 						</h3>
 						<p className="mb-6 text-base font-medium text-secondary lg:text-lg">

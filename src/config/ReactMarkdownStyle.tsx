@@ -20,7 +20,7 @@ export const mdxComponents: Components = {
 		<h6 className="text-xs font-bold dark:text-white">{children}</h6>
 	),
 	ul: ({ children }) => (
-		<ul className="ml-4 mt-4 list-disc dark:text-slate-300">{children}</ul>
+		<ul className="mt-4 ml-4 list-disc dark:text-slate-300">{children}</ul>
 	),
 	li: ({ children }) => (
 		<li className="mt-1 dark:text-slate-300">{children}</li>
@@ -83,7 +83,7 @@ export const mdxComponents: Components = {
 				{children as string}
 			</SyntaxHighlighter>
 		) : (
-			<code className="overflow-auto rounded-md bg-[#1e1e1e] px-[6px] py-[3px] font-mono text-sm italic text-white">
+			<code className="overflow-auto rounded-md bg-[#1e1e1e] px-[6px] py-[3px] font-mono text-sm text-white italic">
 				{children}
 			</code>
 		);

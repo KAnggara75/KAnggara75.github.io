@@ -39,7 +39,7 @@ export default function PostThumb({
 					<div className="tags hidden sm:block">
 						{tags.map((tag) => (
 							<Link
-								className="mx-1 mb-2 inline-block rounded-full border border-s px-2 lowercase leading-6 text-secondary dark:text-slate-300"
+								className="mx-1 mb-2 inline-block rounded-full border border-s px-2 leading-6 text-secondary lowercase dark:text-slate-300"
 								key={tag}
 								to={"tags/" + tag}
 							>

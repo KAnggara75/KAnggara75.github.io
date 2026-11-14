@@ -1,7 +1,7 @@
 export default function Footer() {
 	return (
 		<footer
-			className="bg-dark pb-12 pt-24"
+			className="bg-dark pt-24 pb-12"
 			id="footer"
 		>
 			<div className="container">
@@ -159,7 +159,7 @@ export default function Footer() {
 						<a
 							href="http://instagram.com/kanggara75"
 							target="_blank"
-							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-rose-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white"
+							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-rose-500 hover:bg-linear-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white"
 						>
 							<svg
 								className="fill-current"

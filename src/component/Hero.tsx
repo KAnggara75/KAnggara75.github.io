@@ -16,17 +16,17 @@ export default function Hero() {
 								className="inline-block"
 							/>{" "}
 							Perkenalkan Saya
-							<span className="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">
+							<span className="mt-1 block text-4xl font-bold text-dark lg:text-5xl dark:text-white">
 								Kelvin Anggara
 							</span>
 						</h1>
-						<h2 className="mb-5 text-lg font-medium text-secondary dark:text-slate-300 lg:text-2xl">
+						<h2 className="mb-5 text-lg font-medium text-secondary lg:text-2xl dark:text-slate-300">
 							<span className="text-dark dark:text-white">
 								Software Developer{" "}
 							</span>{" "}
 							| PHP-Java-Flutter-IoT
 						</h2>
-						<p className="mb-10 font-medium leading-relaxed text-secondary dark:text-slate-300">
+						<p className="mb-10 leading-relaxed font-medium text-secondary dark:text-slate-300">
 							Saat ini sedang belajar Spring Boot, Laravel dan Flutter
 							Development.
 						</p>

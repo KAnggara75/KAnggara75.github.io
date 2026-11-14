@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function Php() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-php hover:bg-php hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-php hover:bg-php hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -18,7 +18,7 @@ export function Php() {
 
 export function Html() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-html hover:bg-html hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-html hover:bg-html hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -34,7 +34,7 @@ export function Html() {
 
 export function Css() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-css hover:bg-css hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-css hover:bg-css hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -50,7 +50,7 @@ export function Css() {
 
 export function JavaScript() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-javascript hover:bg-javascript hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-javascript hover:bg-javascript hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -66,7 +66,7 @@ export function JavaScript() {
 
 export function MongoIcon() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-mongo hover:bg-mongo hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-mongo hover:bg-mongo hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -82,7 +82,7 @@ export function MongoIcon() {
 
 export function ExpressIcon() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-black hover:bg-black hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-black hover:bg-black hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -98,7 +98,7 @@ export function ExpressIcon() {
 
 export function ReactIcon() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-react hover:bg-react hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-react hover:bg-react hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -114,7 +114,7 @@ export function ReactIcon() {
 
 export function NodeIcon() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-node hover:bg-node hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-node hover:bg-node hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -130,7 +130,7 @@ export function NodeIcon() {
 
 export function MysqlIcon() {
 	return (
-		<span className="mb-1 mr-[5px] flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-mysql hover:bg-mysql hover:text-white">
+		<span className="mr-[5px] mb-1 flex h-6 w-6 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-mysql hover:bg-mysql hover:text-white">
 			<svg
 				className="fill-current"
 				width="15px"
@@ -209,7 +209,7 @@ export function InstagramIcon() {
 		<Link
 			to="http://instagram.com/kanggara75"
 			target="_blank"
-			className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary text-secondary hover:border-rose-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white dark:border-slate-300 dark:text-slate-300"
+			className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary text-secondary hover:border-rose-500 hover:bg-linear-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white dark:border-slate-300 dark:text-slate-300"
 		>
 			<svg
 				className="fill-current"

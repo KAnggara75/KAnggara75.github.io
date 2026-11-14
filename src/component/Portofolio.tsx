@@ -22,7 +22,7 @@ export default function Portofolio() {
 						<h4 className="mb-2 text-lg font-semibold text-primary sm:text-4xl lg:text-5xl">
 							Portfolio
 						</h4>
-						<h2 className="mb-4 text-3xl font-bold text-dark dark:text-slate-100 md:text-lg">
+						<h2 className="mb-4 text-3xl font-bold text-dark md:text-lg dark:text-slate-100">
 							Project Terbaru
 						</h2>
 						<p className="text-md font-medium text-secondary">
@@ -40,7 +40,7 @@ export default function Portofolio() {
 								width="w-full"
 							/>
 						</div>
-						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
+						<h3 className="mt-5 mb-2 text-xl font-semibold text-dark dark:text-slate-100">
 							Kelvin Anggara
 						</h3>
 						<div className="flex">
@@ -62,7 +62,7 @@ export default function Portofolio() {
 								width="w-full"
 							/>
 						</div>
-						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
+						<h3 className="mt-5 mb-2 text-xl font-semibold text-dark dark:text-slate-100">
 							E-Commerce
 						</h3>
 						<div className="flex">
@@ -84,7 +84,7 @@ export default function Portofolio() {
 								width="w-full"
 							/>
 						</div>
-						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
+						<h3 className="mt-5 mb-2 text-xl font-semibold text-dark dark:text-slate-100">
 							Technical Documentation
 						</h3>
 						<div className="flex">
@@ -106,7 +106,7 @@ export default function Portofolio() {
 								width="w-full"
 							/>
 						</div>
-						<h3 className="mb-2 mt-5 text-xl font-semibold text-dark dark:text-slate-100">
+						<h3 className="mt-5 mb-2 text-xl font-semibold text-dark dark:text-slate-100">
 							Tribute Page
 						</h3>
 						<div className="flex">

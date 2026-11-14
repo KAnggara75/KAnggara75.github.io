@@ -8,7 +8,7 @@ export default function Contact() {
 				<div className="w-full px-4">
 					<div className="mx-auto mb-16 text-center">
 						<h4 className="mb-2 text-lg font-semibold text-primary">Contact</h4>
-						<h2 className="mb-4 text-3xl font-bold text-dark dark:text-slate-100 sm:text-4xl lg:text-5xl">
+						<h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-slate-100">
 							Hubungi Saya
 						</h2>
 						<p className="text-md font-medium text-secondary md:text-lg">
@@ -31,7 +31,7 @@ export default function Contact() {
 								type="text"
 								name="name"
 								id="name"
-								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							/>
 						</div>
 						<div className="mb-8 w-full px-4">
@@ -45,7 +45,7 @@ export default function Contact() {
 								type="text"
 								name="email"
 								id="email"
-								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							/>
 						</div>
 						<div className="mb-8 w-full px-4">
@@ -58,7 +58,7 @@ export default function Contact() {
 							<textarea
 								name="msg"
 								id="msg"
-								className="h-30 w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+								className="h-30 w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							></textarea>
 						</div>
 						<div className="w-full px-4">

@@ -1,6 +1,6 @@
 ---
 title: Setup Server
-subtitle: Linux Server Setup
+subtitle: Panduan konfigurasi awal Linux Server, swap file, dan security hardening.
 tags: [linux, vps, debian, ubuntu]
 source: https://kanggara.my.id
 author: Kelvin Anggara

@@ -1,4 +1,22 @@
+import { FormEvent, useState } from "react";
+
 export default function Contact() {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [msg, setMsg] = useState("");
+
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const recipient = "kelvin.kanggara@gmail.com";
+		const subject = encodeURIComponent(
+			`Pesan dari Portofolio - ${name || "Pengunjung"}`
+		);
+		const body = encodeURIComponent(
+			`Halo Kelvin,\n\nNama: ${name}\nEmail: ${email}\n\nPesan:\n${msg}\n`
+		);
+		window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+	};
+
 	return (
 		<section
 			id="contact"
@@ -20,7 +38,7 @@ export default function Contact() {
 				</div>
 
 				<div className="w-full lg:mx-auto lg:w-2/3">
-					<form action="">
+					<form onSubmit={handleSubmit}>
 						<div className="mb-8 w-full px-4">
 							<label
 								htmlFor="name"
@@ -32,6 +50,9 @@ export default function Contact() {
 								type="text"
 								name="name"
 								id="name"
+								required
+								value={name}
+								onChange={(e) => setName(e.target.value)}
 								placeholder="Nama Anda"
 								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							/>
@@ -47,6 +68,9 @@ export default function Contact() {
 								type="email"
 								name="email"
 								id="email"
+								required
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 								placeholder="email@domain.com"
 								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							/>
@@ -62,6 +86,9 @@ export default function Contact() {
 								name="msg"
 								id="msg"
 								rows={5}
+								required
+								value={msg}
+								onChange={(e) => setMsg(e.target.value)}
 								placeholder="Tuliskan pesan Anda..."
 								className="w-full rounded-xl bg-slate-200 p-3 text-dark focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 							></textarea>

@@ -28,13 +28,16 @@ export default function Header() {
 		navMenu!.classList.toggle("hidden");
 	};
 
-	let homeUrl = "/";
-	let blogUrl = "/blog";
-	let aboutUrl = "/about";
-	let contactUrl = "/contact";
-	let projectsUrl = "/projects";
+	let homeUrl = "/#home";
+	let blogUrl = "/#blog";
+	let aboutUrl = "/#about";
+	let contactUrl = "/#contact";
+	let projectsUrl = "/#projects";
 
-	if (window.location.pathname === "/") {
+	if (
+		typeof window !== "undefined" &&
+		(window.location.pathname === "/" || window.location.pathname === "")
+	) {
 		homeUrl = "#home";
 		blogUrl = "#blog";
 		aboutUrl = "#about";

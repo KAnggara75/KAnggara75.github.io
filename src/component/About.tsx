@@ -22,12 +22,11 @@ export default function About() {
 							Spesialisasi & Rekayasa Sistem
 						</h2>
 						<p className="max-w-xl text-base font-medium text-secondary lg:text-lg dark:text-slate-300">
-							Backend Developer yang berfokus pada sistem high-concurrency,
-							reliabilitas infrastruktur, dan clean architecture. Sehari-hari
-							merancang microservices terdistribusi dengan Go dan Java
-							(Quarkus), pipeline event-driven berbasis Apache Kafka, serta
-							otomasi infrastruktur menggunakan Kubernetes (K3s) dan pendekatan
-							GitOps.
+							Berpengalaman merancang layanan backend dari nol hingga
+							produksi—mulai dari pemodelan domain berbasis clean architecture,
+							pemrosesan stream asinkron dengan Apache Kafka, hingga mengelola
+							klaster Kubernetes (K3s) secara mandiri dengan pendekatan GitOps
+							dan observability penuh.
 						</p>
 					</div>
 					<div className="w-full px-4 lg:w-1/2">

@@ -24,7 +24,7 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
 - **Tanggung Jawab**: Implementasi antarmuka pengguna SPA (Single Page Application), routing sisi klien, render Markdown, dan tema tampilan (Light/Dark mode).
 - **Entry / Key Files**:
   - `src/main.tsx` — Bootstrap aplikasi React dengan React 19 `createRoot`, `StrictMode`, dan `BrowserRouter`.
-  - `src/Routers.tsx` — Definisi rute aplikasi (`/`, `/about`, `/post/:yyyy/:mm/:postId`).
+  - `src/Routers.tsx` — Definisi rute aplikasi (`/`, `/about`, `/tags/:tag`, `/post/:yyyy/:mm/:postId`, `*`).
   - `src/index.css` — Entry stylesheet Tailwind CSS v4 (`@import "tailwindcss";`), custom variants, dan styling kustom navbar.
   - `src/model/Posts.ts` — Definisi antarmuka TypeScript untuk skema data metadata artikel (`PostsList`, `PostTypes`).
 - **Dependencies**: `react`, `react-dom`, `react-router`.
@@ -58,6 +58,7 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
 - **Entry / Key Files**:
   - `src/pages/Home.tsx` — Komposisi halaman beranda satu halaman (Hero, About, Projects, Blog, Contact, Footer).
   - `src/pages/Post.tsx` — Pembaca artikel teknis; memuat konten Markdown secara dinamis via `fetch`, parsing frontmatter, dan render styling syntax highlighting.
+  - `src/pages/Tags.tsx` — Halaman kurasi artikel berdasarkan tag/topik (`/tags/:tag`); filter dinamis dari `index.json`, selector topik interaktif, dan empty state.
   - `src/pages/About.tsx` — Halaman About khusus.
   - `src/pages/404.tsx` — Halaman fallback navigasi rute tidak ditemukan (error 404).
 - **Dependencies**: `react-markdown`, `react-syntax-highlighter`, `src/config/ReactMarkdownStyle.tsx`.

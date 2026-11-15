@@ -167,7 +167,7 @@ export function YouTubeIcon() {
 export function GithubIcon() {
 	return (
 		<Link
-			to="http://github.com/kanggara75"
+			to="https://github.com/KAnggara75"
 			target="_blank"
 			className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary text-secondary hover:border-slate-700 hover:bg-[#181717] hover:text-white dark:border-slate-300 dark:text-slate-300"
 		>
@@ -187,7 +187,7 @@ export function GithubIcon() {
 export function TwitterIcon() {
 	return (
 		<Link
-			to="http://x.com/kanggara75"
+			to="https://x.com/kanggara75"
 			target="_blank"
 			className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary text-secondary hover:border-black hover:bg-black hover:text-white dark:border-slate-300 dark:text-slate-300"
 		>
@@ -207,7 +207,7 @@ export function TwitterIcon() {
 export function InstagramIcon() {
 	return (
 		<Link
-			to="http://instagram.com/kanggara75"
+			to="https://instagram.com/kanggara75"
 			target="_blank"
 			className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary text-secondary hover:border-rose-500 hover:bg-linear-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white dark:border-slate-300 dark:text-slate-300"
 		>

@@ -20,9 +20,9 @@ Seluruh dokumentasi dasar arsitektur tersimpan terpusat di dalam direktori `.con
 
 - **Runtime & Package Manager**: [Bun](https://bun.sh) (`v1.4.x+`)
 - **Frontend Framework**: React 19 (`react`, `react-dom`)
-- **Routing**: React Router v7 (`react-router`, `react-router-dom`)
+- **Routing**: React Router v7 (`react-router`)
 - **Styling**: Tailwind CSS v4 (`@tailwindcss/vite`, `@import "tailwindcss";`)
-- **Build Tool**: Vite 6 dengan SWC (`@vitejs/plugin-react-swc`)
+- **Build Tool**: Vite 8 dengan Rolldown & LightningCSS (`@vitejs/plugin-react`)
 - **Markdown Reader**: `react-markdown` 10, `react-syntax-highlighter` (Prism vscDarkPlus)
 - **Linting & Formatting**: ESLint 9 (Flat Config), Prettier 3 (`prettier-plugin-tailwindcss`)
 - **Hosting**: GitHub Pages (`https://kanggara.my.id`)

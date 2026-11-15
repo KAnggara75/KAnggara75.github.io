@@ -8,13 +8,13 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
 
 - **Tanggung Jawab**: Titik masuk konfigurasi build, linting, formatting, tooling, serta orkestrasi skrip pre-build.
 - **File Kunci**:
-  - `package.json` — Deklarasi dependensi React 19, React Router v7, Tailwind CSS v4, Vite 6, TypeScript 5, dan ESLint 9.
-  - `vite.config.ts` — Konfigurasi Vite bundler, integrasi plugin `@tailwindcss/vite`, SWC React plugin, dan strategi manual code-splitting.
-  - `run.sh` — Skrip bash pra-build untuk mengekstrak metadata frontmatter dari `pages/*.md`, menghasilkan `public/index.json`, dan mengorganisir hierarki artikel ke `public/pages/`.
+  - `package.json` — Deklarasi dependensi React 19, React Router v7, Tailwind CSS v4, Vite 8, TypeScript 5, dan ESLint 9.
+  - `vite.config.ts` — Konfigurasi Vite bundler berbasis Rolldown & OXC, integrasi plugin `@tailwindcss/vite`, `@vitejs/plugin-react`, `node:path`, `import.meta.dirname`, dan strategi manual code-splitting.
+  - `run.sh` — Skrip bash pra-build untuk mengekstrak metadata frontmatter dari `pages/*.md`, menghasilkan `public/index.json` dengan URL berawalan slash absolut (`/post/...`), dan mengorganisir hierarki artikel ke `public/pages/`.
   - `eslint.config.js` — Flat config ESLint berbasis TypeScript-ESLint, react-hooks, dan react-refresh.
   - `.prettierrc.json` — Konfigurasi formatting Prettier terintegrasi `prettier-plugin-tailwindcss` dan `tailwindStylesheet`.
   - `tailwind.config.js` — Konfigurasi tema warisan yang dihubungkan ke Tailwind CSS v4 via `@config`.
-- **Dependensi**: Bun, Vite, Tailwind CSS v4, TypeScript, Prettier, ESLint.
+- **Dependensi**: Bun, Vite 8, Tailwind CSS v4, TypeScript, Prettier, ESLint.
 - **Konsumen**: Developer CLI, skrip `bun run dev`, `bun run build`, dan GitHub Actions CI/CD.
 
 ---
@@ -47,7 +47,7 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
   - `src/component/BackToTop.tsx` — Tombol pintas navigasi kembali ke bagian paling atas halaman.
   - `src/component/Icons.tsx` — Kumpulan ikon vektor SVG untuk bahasa pemrograman, database, dan media sosial.
   - `src/component/Client.tsx` — Komponen logo klien warisan (saat ini dinonaktifkan dari alur halaman utama).
-- **Dependencies**: Tailwind CSS utility classes, `react-router-dom`.
+- **Dependencies**: Tailwind CSS utility classes, `react-router`.
 - **Consumers**: Halaman `src/pages/Home.tsx` dan `src/pages/Post.tsx`.
 
 ---

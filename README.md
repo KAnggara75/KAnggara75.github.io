@@ -50,6 +50,6 @@ export default tseslint.config({
 ```
 
 ```bash
-bun add @react-router/node @react-router/serve path react react-dom react-markdown react-router react-router-dom react-syntax-highlighter
-bun add -D @eslint/js @react-router/dev @types/node @types/react @types/react-dom @types/react-router-dom @types/react-syntax-highlighter @vitejs/plugin-react autoprefixer eslint eslint-plugin-react-hooks eslint-plugin-react-refresh globals postcss prettier prettier-plugin-tailwindcss tailwindcss typescript typescript-eslint vite
+bun add react react-dom react-markdown react-router react-syntax-highlighter
+bun add -D @eslint/js @tailwindcss/vite @types/bun @types/node @types/react @types/react-dom @types/react-syntax-highlighter @vitejs/plugin-react eslint eslint-plugin-react-hooks eslint-plugin-react-refresh globals prettier prettier-plugin-tailwindcss tailwindcss typescript typescript-eslint vite
 ```

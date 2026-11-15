@@ -6,7 +6,7 @@ Arsitektur sistem, alur pemrosesan data, model eksekusi runtime, dan pipeline pe
 
 ## 1. Component Architecture & Diagram
 
-Sistem beroperasi sebagai Single Page Application (SPA) modern berbasis React 19 dan Vite, yang di-host secara serverless pada infrastruktur GitHub Pages dengan domain kustom `kanggara.my.id`.
+Sistem beroperasi sebagai Single Page Application (SPA) modern berbasis React 19 dan Vite 8 (Rolldown/OXC), yang di-host secara serverless pada infrastruktur GitHub Pages dengan domain kustom `kanggara.my.id`.
 
 ```mermaid
 graph TD
@@ -15,7 +15,7 @@ graph TD
         RunSh["run.sh<br/>(Metadata Parser & Indexer)"]
         IndexJSON["public/index.json<br/>(Compiled Feed)"]
         PublicPages["public/pages/YYYY/MM/*.md<br/>(Body Content)"]
-        ViteBuild["Vite 6 + SWC + Tailwind v4<br/>(Static Bundling)"]
+        ViteBuild["Vite 8 + Rolldown/OXC + Tailwind v4<br/>(Static Bundling)"]
         DistFolder["./dist<br/>(Optimized Production Assets)"]
 
         RawPages --> RunSh

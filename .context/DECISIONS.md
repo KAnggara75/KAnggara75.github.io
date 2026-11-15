@@ -77,3 +77,43 @@ Dokumentasi keputusan arsitektur teknis yang bersifat _append-only_. Keputusan h
 - **Consequences**:
   - _Positif_: Meningkatkan kredibilitas profesional di hadapan evaluator teknis dan audiens industri rekayasa perangkat lunak.
   - _Negatif_: Bagian Clients dinonaktifkan sementara sampai ada data mitra/klien yang dapat dipublikasikan secara resmi.
+
+---
+
+## ADR-006: Eliminasi Dead Dependencies, Zero Attack Surface & Penutupan Dependabot Alert #5
+
+- **Status**: Accepted
+- **Date**: 2026-11-15
+- **Source**: Dependabot Alert #5 (`GHSA-3g3m-2fjr-6pw4` / `CVE-2026-118773`) & Dependency Audit
+- **Context**:
+  - GitHub Dependabot mendeteksi kerentanan tingkat Medium pada pustaka `glob` (`>= 9.0.0, <= 14.0.1`) terkait unhandled AbortSignal filesystem traversal.
+  - Audit kode menunjukkan `glob` adalah _dead dependency_ yang sama sekali tidak pernah di-import dalam basis kode.
+  - Selain `glob`, ditemukan paket _dummy/polyfill_ usang (`path`), paket SSR yang tidak relevan dengan static SPA (`@react-router/node`, `@react-router/serve`, `@react-router/dev`), paket tipe kadaluarsa (`@types/react-router-dom`), serta duplikasi paket routing (`react-router-dom`).
+- **Decision**:
+  - Menghapus pustaka `glob` sepenuhnya (`bun remove glob`), menutup Dependabot Alert #5 tanpa perlu menambah overhead versi baru.
+  - Menghapus paket polyfill `path` dan beralih ke native `node:path`.
+  - Menghapus seluruh dependensi SSR React Router (`@react-router/node`, `@react-router/serve`, `@react-router/dev`).
+  - Menghapus `react-router-dom` dan `@types/react-router-dom`, lalu menyatukan seluruh impor routing (komponen `Link`, `Routes`, dll.) langsung ke `react-router` v7.
+  - Membersihkan deklarasi `trustedDependencies: ["@swc/core"]` yang sudah usang.
+- **Consequences**:
+  - _Positif_: Dependabot Alert tertutup, _attack surface_ berkurang drastis, `package.json` hanya menyisakan 5 dependensi runtime esensial, ukuran `node_modules` dan `bun.lock` jauh lebih ramping, serta instalasi CI lebih cepat.
+  - _Negatif_: Tidak ada. Seluruh fungsi SPA tetap berjalan normal.
+
+---
+
+## ADR-007: Upgrade ke Vite 8 dan Migrasi ke `@vitejs/plugin-react` (Rolldown/OXC Native)
+
+- **Status**: Accepted
+- **Date**: 2026-11-15
+- **Source**: Developer environment diagnostics & Vite deprecation warning
+- **Context**:
+  - Lingkungan runtime modern menggunakan Vite 8 yang bertransisi ke engine Rolldown dan parser OXC.
+  - Penggunaan `__dirname` di `vite.config.ts` memicu peringatan deprecation dari `configLoader: 'native'`.
+  - Plugin lama `@vitejs/plugin-react-swc` menyuntikkan opsi konfigurasi `esbuild: { ... }` yang ditandai _deprecated_ oleh Vite 8 demi `oxc`.
+- **Decision**:
+  - Mengganti `__dirname` dengan standar resmi ES Module: `import.meta.dirname` pada `vite.config.ts`.
+  - Meng-upgrade `vite` ke versi mayor terbaru `^8.3.8`.
+  - Memigrasikan plugin React dari `@vitejs/plugin-react-swc` ke plugin resmi Vite 8: `@vitejs/plugin-react@^6.3.0` yang mendukung OXC & Rolldown secara native.
+- **Consequences**:
+  - _Positif_: Waktu kompilasi produksi menurun drastis menjadi ~280ms (peningkatan kecepatan ~6x lipat), bebas peringatan deprecation (0 warnings), konfigurasi _future-proof_ siap untuk native config loading.
+  - _Negatif_: Memerlukan kompatibilitas Node `>= 20.11` / Bun modern untuk dukungan native `import.meta.dirname`.

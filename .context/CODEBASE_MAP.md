@@ -11,6 +11,7 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
   - `package.json` — Deklarasi dependensi React 19, React Router v7, Tailwind CSS v4, Vite 8, TypeScript 5, dan ESLint 9.
   - `vite.config.ts` — Konfigurasi Vite bundler berbasis Rolldown & OXC, integrasi plugin `@tailwindcss/vite`, `@vitejs/plugin-react`, `node:path`, `import.meta.dirname`, dan strategi manual code-splitting.
   - `run.sh` — Skrip bash pra-build untuk mengekstrak metadata frontmatter dari `pages/*.md`, menghasilkan `public/index.json` dengan URL berawalan slash absolut (`/post/...`), dan mengorganisir hierarki artikel ke `public/pages/`.
+  - `test.sh` — Skrip bash healthcheck pasca-deploy untuk memverifikasi kesiapan live site, validasi bundle asset JS/CSS live, index.json, 404 handler, dan exit code yang ketat.
   - `eslint.config.js` — Flat config ESLint berbasis TypeScript-ESLint, react-hooks, dan react-refresh.
   - `.prettierrc.json` — Konfigurasi formatting Prettier terintegrasi `prettier-plugin-tailwindcss` dan `tailwindStylesheet`.
   - `tailwind.config.js` — Konfigurasi tema warisan yang dihubungkan ke Tailwind CSS v4 via `@config`.
@@ -94,8 +95,9 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
 
 - **Tanggung Jawab**: Pipeline pengujian dan rilis otomatis situs web ke GitHub Pages.
 - **Entry / Key Files**:
-  - `.github/workflows/deploy.yml` — Workflow deployment otomatis pada push ke branch `main`: setup Bun, eksekusi `./run.sh`, `bun run build`, upload artefak `./dist`, dan deploy ke GitHub Pages.
+  - `.github/workflows/deploy.yml` — Workflow deployment otomatis pada push ke branch `main`: setup Bun, eksekusi `./run.sh`, `bun run build`, upload artefak `./dist`, deploy ke GitHub Pages, dan verifikasi healthcheck via `test.sh`.
   - `.github/workflows/deploy-test.yml` — Workflow validasi build otomatis pada setiap Pull Request.
+  - `.github/workflows/check-deployment.yml` — Workflow pengujian integritas live deployment GitHub Pages berbasis `workflow_dispatch` manual dan penjadwalan cron harian.
   - `.github/dependabot.yml` — Konfigurasi pembaruan dependensi otomatis harian untuk npm/yarn ecosystem.
 - **Dependencies**: GitHub Actions, `oven-sh/setup-bun`, `actions/deploy-pages`.
 - **Consumers**: GitHub repository runner.

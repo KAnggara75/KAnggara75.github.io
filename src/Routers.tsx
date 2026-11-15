@@ -1,5 +1,6 @@
 import Home from "./pages/Home";
 import Post from "./pages/Post";
+import Tags from "./pages/Tags";
 import About from "./pages/About";
 import ErrorNotFound from "./pages/404";
 import { Routes, Route } from "react-router";
@@ -22,8 +23,20 @@ export default function Routers() {
 				element={<About />}
 			/>
 			<Route
+				path="tags"
+				element={<Tags />}
+			/>
+			<Route
+				path="tags/:tag"
+				element={<Tags />}
+			/>
+			<Route
 				path="post/:yyyy/:mm/:postId"
 				element={<Post />}
+			/>
+			<Route
+				path="*"
+				element={<ErrorNotFound />}
 			/>
 		</Routes>
 	);

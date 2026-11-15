@@ -8,7 +8,7 @@
 			"url": "/post/2022/01/24-kanggara75",
 			"src": "pages/2022/01/24-kanggara75.md",
 			"postOn": "2022-01-24",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["about"]
 		},
 		{
@@ -19,7 +19,7 @@
 			"url": "/post/2025/02/01-helm",
 			"src": "pages/2025/02/01-helm.md",
 			"postOn": "2025-02-01",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps"]
 		},
 		{
@@ -30,7 +30,7 @@
 			"url": "/post/2025/02/05-proxmox",
 			"src": "pages/2025/02/05-proxmox.md",
 			"postOn": "2025-02-05",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps"]
 		},
 		{
@@ -41,7 +41,7 @@
 			"url": "/post/2025/02/07-k3s",
 			"src": "pages/2025/02/07-k3s.md",
 			"postOn": "2025-02-07",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		},
 		{
@@ -52,7 +52,7 @@
 			"url": "/post/2025/02/08-k3s-config",
 			"src": "pages/2025/02/08-k3s-config.md",
 			"postOn": "2025-02-08",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		},
 		{
@@ -63,7 +63,7 @@
 			"url": "/post/2025/02/09-k8s-ingress-tls",
 			"src": "pages/2025/02/09-k8s-ingress-tls.md",
 			"postOn": "2025-02-09",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		},
 		{
@@ -74,7 +74,7 @@
 			"url": "/post/2025/02/09-k8s-nginx-ingress",
 			"src": "pages/2025/02/09-k8s-nginx-ingress.md",
 			"postOn": "2025-02-09",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["Kubernetes","cluster","linux","DevOps","k8s","k3s"]
 		},
 		{
@@ -85,7 +85,7 @@
 			"url": "/post/2025/02/24-server-setup",
 			"src": "pages/2025/02/24-server-setup.md",
 			"postOn": "2025-02-24",
-			"img": "img/default.jpeg",
+			"img": "/img/default.jpeg",
 			"tags": ["linux","vps","debian","ubuntu"]
 		}
 	]

@@ -17,12 +17,13 @@ export default function PostThumb({
 	tags,
 }: Readonly<PostThumbProps>) {
 	const postHref = href.startsWith("/") ? href : `/${href}`;
+	const postImg = img.startsWith("/") ? img : `/${img}`;
 
 	return (
 		<div className="w-full px-4 lg:w-1/2 xl:w-1/3">
 			<div className="mb-10 overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-lg dark:border-slate-700/60 dark:bg-slate-900">
 				<img
-					src={img}
+					src={postImg}
 					alt={title}
 					className="w-full"
 				/>

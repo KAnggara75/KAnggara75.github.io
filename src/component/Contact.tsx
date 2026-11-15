@@ -2,7 +2,7 @@ export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="py-24 dark:bg-slate-800"
+			className="bg-slate-100 py-24 dark:bg-dark"
 		>
 			<div className="container">
 				<div className="w-full px-4">

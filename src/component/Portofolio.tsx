@@ -61,10 +61,10 @@ export default function Portofolio() {
 			<div className="container">
 				<div className="w-full px-4">
 					<div className="mx-auto mb-16 text-center">
-						<h4 className="mb-2 text-lg font-semibold text-primary sm:text-4xl lg:text-5xl">
+						<h4 className="mb-2 text-lg font-semibold text-primary">
 							Projects
 						</h4>
-						<h2 className="mb-4 text-3xl font-bold text-dark md:text-xl dark:text-slate-100">
+						<h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-slate-100">
 							Featured Engineering Projects
 						</h2>
 						<p className="mx-auto max-w-2xl text-base font-medium text-secondary dark:text-slate-300">

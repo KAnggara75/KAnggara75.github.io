@@ -79,12 +79,55 @@ get_all_file() {
 	echo -e "\t]\n}" >>$INDEX
 }
 
+generate_sitemap() {
+	SITEMAP="$WORK_DIR/public/sitemap.xml"
+	BASE_URL="https://kanggara.my.id"
+
+	echo '<?xml version="1.0" encoding="UTF-8"?>' >"$SITEMAP"
+	echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >>"$SITEMAP"
+
+	# Core pages
+	echo -e "\t<url>\n\t\t<loc>$BASE_URL/</loc>\n\t\t<changefreq>weekly</changefreq>\n\t\t<priority>1.0</priority>\n\t</url>" >>"$SITEMAP"
+	echo -e "\t<url>\n\t\t<loc>$BASE_URL/about</loc>\n\t\t<changefreq>monthly</changefreq>\n\t\t<priority>0.8</priority>\n\t</url>" >>"$SITEMAP"
+	echo -e "\t<url>\n\t\t<loc>$BASE_URL/tags</loc>\n\t\t<changefreq>weekly</changefreq>\n\t\t<priority>0.8</priority>\n\t</url>" >>"$SITEMAP"
+
+	# Unique tags
+	TAGS_LIST=$(grep -i 'tags:' "$WORK_DIR"/pages/*.md | sed -e 's/.*tags: \[//' -e 's/\].*//' -e 's/,/ /g' | tr -s ' ' | tr ' ' '\n' | sort -u | grep -v '^$' || true)
+	for tag in $TAGS_LIST; do
+		echo -e "\t<url>\n\t\t<loc>$BASE_URL/tags/$tag</loc>\n\t\t<changefreq>weekly</changefreq>\n\t\t<priority>0.6</priority>\n\t</url>" >>"$SITEMAP"
+	done
+
+	# Articles
+	for file in "$WORK_DIR"/pages/*.md; do
+		filename=$(basename "$file")
+		IFS='-' read -r YYYY MM DD name <<<"$filename"
+		post_url="/post/$YYYY/$MM/${DD}-${name%.md}"
+		post_date="$YYYY-$MM-$DD"
+
+		echo -e "\t<url>\n\t\t<loc>$BASE_URL$post_url</loc>\n\t\t<lastmod>$post_date</lastmod>\n\t\t<changefreq>monthly</changefreq>\n\t\t<priority>0.7</priority>\n\t</url>" >>"$SITEMAP"
+	done
+
+	echo '</urlset>' >>"$SITEMAP"
+	cp "$SITEMAP" "$WORK_DIR/sitemap.xml"
+}
+
+sync_static_assets() {
+	# Ensure root static assets are mirrored to public/ so Vite copies them to dist/
+	cp "$WORK_DIR/CNAME" "$WORK_DIR/public/CNAME" 2>/dev/null || true
+	cp "$WORK_DIR/ads.txt" "$WORK_DIR/public/ads.txt" 2>/dev/null || true
+	cp "$WORK_DIR/.nojekyll" "$WORK_DIR/public/.nojekyll" 2>/dev/null || true
+	cp "$WORK_DIR/robots.txt" "$WORK_DIR/public/robots.txt" 2>/dev/null || true
+}
+
 main() {
 	rm -rf public/pages
-	mkdir public/pages
-	cd $WORK_DIR/pages
+	mkdir -p public/pages
+	cd "$WORK_DIR/pages"
 	get_all_file
-	rm $INDEX=
+	rm -f "$INDEX="
+	cd "$WORK_DIR"
+	generate_sitemap
+	sync_static_assets
 }
 
 main || abort "Compose Error!"

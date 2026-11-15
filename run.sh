@@ -38,7 +38,7 @@ get_all_file() {
 
 		# parse variable from md file
 		src=$(echo "pages/$YYYY/$MM/$DD-$name")
-		url=$(echo "post/$YYYY/$MM/$DD-$name" | sed "s/\.md//g")
+		url=$(echo "/post/$YYYY/$MM/$DD-$name" | sed "s/\.md//g")
 		title=$(sed -n '/title:/I{p;q;}' $file | sed "s/title: //g")
 		tags=$(sed -n '/tags:/I{p;q;}' $file | sed "s/tags: \[//g" | sed 's/\]//g' | sed 's/, /","/g' | sed 's/^/["/' | sed 's/$/"]/')
 		subtitle=$(sed -n '/subtitle:/I{p;q;}' $file | sed "s/subtitle: //g")

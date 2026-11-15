@@ -9,6 +9,7 @@ Daftar inventaris pekerjaan prioritas, catatan teknis, dan perbaikan struktural 
 _Tugas operasional mendesak yang mempengaruhi fungsionalitas dan konsistensi._
 
 - [x] `src/component/Contact.tsx`: Implementasi onSubmit mailto handler agar pengunjung dapat mengirim pesan langsung ke `kelvin.kanggara@gmail.com` tanpa backend tambahan.
+- [x] `test.sh` & `.github/workflows/`: Implementasi otomatisasi pengecekan live deployment GitHub Pages (Issue #29) dengan retry polling, validasi HTTP status bundle JS/CSS, index.json, 404 handler, dan workflow dispatch manual.
 - [x] `pages/2025-02-09-k8s-nginx-ingress.md`: Perbaiki subtitle artikel agar lebih deskriptif dan konsisten berbahasa Indonesia (`Panduan konfigurasi Nginx Ingress Controller dan routing layanan pada klaster K3s/K8s`). _(Selesai di commit e8d247d)_
 
 ---

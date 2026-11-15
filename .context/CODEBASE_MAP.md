@@ -84,7 +84,7 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
   - `public/index.json` — Indeks metadata artikel yang dihasilkan secara otomatis oleh `run.sh`.
   - `public/img/` — Aset gambar statis, thumbnail, ikon, dan foto profil.
   - `CNAME` — Domain kustom GitHub Pages (`kanggara.my.id`).
-  - `robots.txt` & `sitemap.txt` — Pengaturan indeksasi mesin pencari.
+  - `robots.txt` & `sitemap.xml` — Pengaturan indeksasi mesin pencari dan pemetaan URL XML perayapan web.
 - **Dependencies**: Tidak ada (berkas Markdown statis dan aset publik).
 - **Consumers**: Browser, skrip `run.sh`, halaman `Post.tsx` dan `Blog.tsx`.
 

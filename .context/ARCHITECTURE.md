@@ -104,7 +104,7 @@ Konfigurasi `vite.config.ts` mengimplementasikan strategi pemecahan chunk vendor
 
 - **Static Access Logging**: Akses dan bandwidth dicatat secara native oleh analitik repositori GitHub dan metrik Cloudflare/GitHub Pages.
 - **Client Console Diagnostics**: Kesalahan runtime atau kegagalan fetch dicatat ke `console.error()` pada browser.
-- **SEO & Metadata**: Dilengkapi `sitemap.txt`, `robots.txt`, dan `CNAME` untuk monitoring perayapan mesin pencari.
+- **SEO & Metadata**: Dilengkapi `sitemap.xml`, `robots.txt`, dan `CNAME` untuk monitoring perayapan mesin pencari.
 
 ---
 

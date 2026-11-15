@@ -1,6 +1,6 @@
 ---
 title: K3s/K8s Nginx Ingress Configuration
-subtitle: This guide shows how to config ingress k8s/k3s.
+subtitle: Panduan konfigurasi Nginx Ingress Controller dan routing layanan pada klaster K3s/K8s.
 tags: [Kubernetes, cluster, linux, DevOps, k8s, k3s]
 source: https://docs.k3s.io/installation
 author: Kelvin Anggara

@@ -1,4 +1,23 @@
+import { Link } from "react-router";
+
 export default function Footer() {
+	let homeUrl = "/#home";
+	let blogUrl = "/#blog";
+	let aboutUrl = "/#about";
+	let contactUrl = "/#contact";
+	let projectsUrl = "/#projects";
+
+	if (
+		typeof window !== "undefined" &&
+		(window.location.pathname === "/" || window.location.pathname === "")
+	) {
+		homeUrl = "#home";
+		blogUrl = "#blog";
+		aboutUrl = "#about";
+		contactUrl = "#contact";
+		projectsUrl = "#projects";
+	}
+
 	return (
 		<footer
 			className="bg-dark pt-24 pb-12"
@@ -24,28 +43,28 @@ export default function Footer() {
 						</h3>
 						<ul className="text-slate-300">
 							<li>
-								<a
-									href="tags/kubernetes"
+								<Link
+									to="/tags/kubernetes"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Kubernetes & K3s
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="tags/devops"
+								<Link
+									to="/tags/devops"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									DevOps & Cloud-Native
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="tags/linux"
+								<Link
+									to="/tags/linux"
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Linux & Infrastructure
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -55,7 +74,7 @@ export default function Footer() {
 						<ul className="text-slate-300">
 							<li>
 								<a
-									href="#home"
+									href={homeUrl}
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Home
@@ -63,7 +82,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<a
-									href="#about"
+									href={aboutUrl}
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									About
@@ -71,7 +90,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<a
-									href="#projects"
+									href={projectsUrl}
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Projects
@@ -79,7 +98,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<a
-									href="#blog"
+									href={blogUrl}
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Blog
@@ -87,7 +106,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<a
-									href="#contact"
+									href={contactUrl}
 									className="mb-3 inline-block text-base hover:text-primary"
 								>
 									Contact

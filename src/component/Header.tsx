@@ -74,7 +74,8 @@ export default function Header() {
 					<div className="flex items-center px-3">
 						<button
 							id="hamburger"
-							name="humberger"
+							name="hamburger"
+							aria-label="Toggle navigation"
 							type="button"
 							onClick={toggleHamburger}
 							className="absolute right-4 flex items-center lg:invisible"

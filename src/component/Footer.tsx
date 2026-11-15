@@ -117,7 +117,7 @@ export default function Footer() {
 						</a>
 						{/* <!-- Github --> */}
 						<a
-							href="http://github.com/kanggara75"
+							href="https://github.com/KAnggara75"
 							target="_blank"
 							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-slate-700 hover:bg-[#181717] hover:text-white"
 						>
@@ -149,7 +149,7 @@ export default function Footer() {
 						</a>
 						{/* <!-- Instagram --> */}
 						<a
-							href="http://instagram.com/kanggara75"
+							href="https://instagram.com/kanggara75"
 							target="_blank"
 							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-rose-500 hover:bg-linear-to-r hover:from-pink-500 hover:to-rose-500 hover:text-white"
 						>
@@ -165,7 +165,7 @@ export default function Footer() {
 						</a>
 						{/* <!-- X --> */}
 						<a
-							href="http://x.com/kanggara75"
+							href="https://x.com/kanggara75"
 							target="_blank"
 							className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-black hover:bg-black hover:text-white"
 						>

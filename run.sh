@@ -61,14 +61,14 @@ get_all_file() {
 		echo -e "\t\t\t\"src\": \"$src\"," >>$INDEX
 		echo -e "\t\t\t\"postOn\": \"$YYYY-$MM-$DD\"," >>$INDEX
 
-		if [ -e "$PUBLIC_IMG/$url.jpeg" ]; then
-			echo -e "\t\t\t\"img\": \"img/$url.jpeg\"," >>$INDEX
-		elif [ -e "$PUBLIC_IMG/$url.jpg" ]; then
-			echo -e "\t\t\t\"img\": \"img/$url.jpg\"," >>$INDEX
-		elif [ -e "$PUBLIC_IMG/$url.png" ]; then
-			echo -e "\t\t\t\"img\": \"img/$url.png\"," >>$INDEX
+		if [ -e "$PUBLIC_IMG$url.jpeg" ]; then
+			echo -e "\t\t\t\"img\": \"/img$url.jpeg\"," >>$INDEX
+		elif [ -e "$PUBLIC_IMG$url.jpg" ]; then
+			echo -e "\t\t\t\"img\": \"/img$url.jpg\"," >>$INDEX
+		elif [ -e "$PUBLIC_IMG$url.png" ]; then
+			echo -e "\t\t\t\"img\": \"/img$url.png\"," >>$INDEX
 		else
-			echo -e "\t\t\t\"img\": \"img/default.jpeg\"," >>$INDEX
+			echo -e "\t\t\t\"img\": \"/img/default.jpeg\"," >>$INDEX
 		fi
 
 		echo -e "\t\t\t\"tags\": $tags" >>$INDEX

@@ -35,7 +35,7 @@ export default function Blog() {
 	return (
 		<section
 			id="blog"
-			className="bg-slate-100 py-24 dark:bg-dark"
+			className="bg-white py-24 dark:bg-slate-800"
 		>
 			<div className="container">
 				<div className="w-full px-4">

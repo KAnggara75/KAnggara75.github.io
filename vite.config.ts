@@ -1,6 +1,6 @@
 import path from "path";
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
@@ -12,8 +12,8 @@ export default defineConfig({
 		chunkSizeWarningLimit: 1024,
 		rollupOptions: {
 			input: {
-				index: path.resolve(__dirname, "index.html"),
-				404: path.resolve(__dirname, "404.html"),
+				index: path.resolve(import.meta.dirname, "index.html"),
+				404: path.resolve(import.meta.dirname, "404.html"),
 			},
 			output: {
 				manualChunks(id: string) {

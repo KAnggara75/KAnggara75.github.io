@@ -10,8 +10,9 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
 - **File Kunci**:
   - `package.json` — Deklarasi dependensi React 19, React Router v7, Tailwind CSS v4, Vite 8, TypeScript 5, dan ESLint 9.
   - `vite.config.ts` — Konfigurasi Vite bundler berbasis Rolldown & OXC, integrasi plugin `@tailwindcss/vite`, `@vitejs/plugin-react`, `node:path`, `import.meta.dirname`, dan strategi manual code-splitting.
-  - `run.sh` — Skrip bash pra-build untuk mengekstrak metadata frontmatter dari `pages/*.md`, menghasilkan `public/index.json` dengan URL berawalan slash absolut (`/post/...`), dan mengorganisir hierarki artikel ke `public/pages/`.
-  - `test.sh` — Skrip bash healthcheck pasca-deploy untuk memverifikasi kesiapan live site, validasi bundle asset JS/CSS live, index.json, 404 handler, dan exit code yang ketat.
+  - `run.sh` — Skrip bash pra-build untuk mengekstrak metadata frontmatter dari `pages/*.md`, menghasilkan `public/index.json` dengan URL berawalan slash absolut (`/post/...`), mengorganisir hierarki artikel ke `public/pages/`, menghasilkan `public/sitemap.xml` dinamis, serta menyinkronkan aset statis root (`CNAME`, `ads.txt`, `robots.txt`, `.nojekyll`) ke direktori `public/`.
+  - `test.sh` — Skrip bash healthcheck pasca-deploy mandiri dengan polling retry loop untuk memverifikasi kesiapan live site, validasi hash bundle asset JS/CSS, integritas `index.json`, SPA 404 handler, `robots.txt`, dan `sitemap.xml` dengan exit code ketat.
+  - `robots.txt` & `sitemap.xml` — Pengaturan perayapan mesin pencari (crawlers) dan peta situs XML otomatis untuk pengindeksan SEO.
   - `eslint.config.js` — Flat config ESLint berbasis TypeScript-ESLint, react-hooks, dan react-refresh.
   - `.prettierrc.json` — Konfigurasi formatting Prettier terintegrasi `prettier-plugin-tailwindcss` dan `tailwindStylesheet`.
   - `tailwind.config.js` — Konfigurasi tema warisan yang dihubungkan ke Tailwind CSS v4 via `@config`.
@@ -37,13 +38,13 @@ Peta navigasi modul, tanggung jawab subsistem, dependensi, dan integrasi untuk r
 
 - **Tanggung Jawab**: Komponen UI modular berulang yang membentuk tata letak halaman beranda dan artikel.
 - **Entry / Key Files**:
-  - `src/component/Header.tsx` — Navbar responsif, sticky scroll detector, toggle menu mobile hamburger, dan sistem dark mode switcher.
+  - `src/component/Header.tsx` — Navbar responsif, sticky scroll detector, toggle menu mobile hamburger dengan atribut aksesibilitas `aria-label="Toggle navigation"`, dan sistem dark mode switcher.
   - `src/component/Hero.tsx` — Headline profil utama ("Backend & Cloud-Native Engineer"), spesialisasi teknologi, deskripsi, dan tombol Call-to-Action (CTA).
   - `src/component/About.tsx` — Ringkasan fokus rekayasa sistem, arsitektur distributed systems, dan tautan sosial profil pengembang.
-  - `src/component/Portofolio.tsx` — Galeri proyek sistem nyata (PakaiWA, kafka-topic-controller, IDXStock, Rest2Kafka / Conflect) dengan tech badges dan link repositori.
+  - `src/component/Portofolio.tsx` — Galeri proyek sistem nyata (PakaiWA, kafka-topic-controller, IDXStock, Rest2Kafka / Conflect) dengan tipografi heading terstandardisasi (`h4` subtitle, `h2` title), tech badges, dan link repositori.
   - `src/component/Blog.tsx` — Feed artikel teknis terbaru yang dimuat secara asinkron dari `/index.json`.
-  - `src/component/PostThumb.tsx` — Kartu thumbnail artikel blog dengan tags kategori dan tanggal rilis.
-  - `src/component/Contact.tsx` — Formulir kontak dan pesan pengunjung.
+  - `src/component/PostThumb.tsx` — Kartu thumbnail artikel blog dengan normalisasi URL gambar absolut (`/img/...`), tags kategori, dan tanggal rilis.
+  - `src/component/Contact.tsx` — Formulir kontak interaktif dengan controlled React state dan handler `onSubmit` protokol `mailto:kelvin.kanggara@gmail.com`.
   - `src/component/Footer.tsx` — Navigasi footer, kategori artikel, tautan sosial, dan atribusi situs.
   - `src/component/BackToTop.tsx` — Tombol pintas navigasi kembali ke bagian paling atas halaman.
   - `src/component/Icons.tsx` — Kumpulan ikon vektor SVG untuk bahasa pemrograman, database, dan media sosial.

@@ -45,6 +45,9 @@ bun run build
 
 # Menjalankan pre-build skrip pengindeks artikel Markdown saja
 ./run.sh
+
+# Menjalankan verifikasi healthcheck deployment lokal/live
+./test.sh [URL_TARGET]
 ```
 
 ---

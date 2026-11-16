@@ -21,21 +21,24 @@ Tujuan utamanya adalah:
 - **In-Scope**:
   - Presentasi konten web responsif berbasis Single Page Application (SPA).
   - Renderer Markdown dinamis dengan syntax highlighting kode sumber.
-  - Skrip pengindeksan metadata artikel lokal (`run.sh`).
+  - Halaman kurasi dan filter artikel berbasis topik/tag dinamis (`/tags/:tag`).
+  - Skrip pengindeksan metadata artikel dan pembuat sitemap XML otomatis (`run.sh`).
+  - Verifikasi otomatis kesiapan pasca-deploy via polling & bundle hash validation (`test.sh`).
+  - Interaksi formulir kontak langsung via protokol `mailto:` tanpa backend eksternal.
   - Dark mode dan light mode switcher yang sinkron dengan preferensi sistem OS.
   - Deployment otomatis ke GitHub Pages.
 - **Out-of-Scope**:
   - Content Management System (CMS) berbasis database backend dinamis (semua artikel dikelola sebagai berkas Markdown di dalam repositori git).
   - Sistem komentar publik langsung pada situs (saat ini belum diintegrasikan).
-  - Layanan pemrosesan backend aktif untuk formulir pesan (formulir kontak saat ini bersifat presentasional sisi klien).
+  - Database penyimpanan pesan kontak (formulir kontak didelegasikan langsung ke klien email pengguna via mailto).
 
 ---
 
 ## 3. Main Actors (Aktor Utama)
 
-- **Pengunjung / Recruiter / Engineer**: Membaca artikel teknis, meninjau profil teknis, mengeksplorasi repositori proyek, dan mengirimkan pesan kontak.
+- **Pengunjung / Recruiter / Engineer**: Membaca artikel teknis, meninjau profil teknis, mengeksplorasi repositori proyek, memfilter artikel berdasarkan topik, dan mengirimkan pesan kontak via email.
 - **Developer / Penulis (Kelvin Anggara)**: Menulis artikel baru di `pages/*.md`, memelihara kode komponen, dan memicu deployment otomatis melalui `git push`.
-- **GitHub Actions Runner**: Mengotomasi pengujian linting/format, kompilasi TypeScript, pemrosesan aset Vite, dan rilis ke GitHub Pages CDN.
+- **GitHub Actions Runner**: Mengotomasi pengujian linting/format, kompilasi TypeScript, pemrosesan aset Vite, rilis ke GitHub Pages CDN, dan verifikasi pasca-deploy.
 
 ---
 
@@ -50,9 +53,12 @@ Tujuan utamanya adalah:
 
 ## 5. External Systems & Integrations
 
-- **GitHub Pages**: Platform hosting aset statis dan CDN gratis.
+- **GitHub Pages**: Platform hosting aset statis dan Fastly CDN gratis.
 - **GitHub API / Repositories**: Tautan sumber kode proyek (`github.com/KAnggara75/*`).
 - **Prism / Refractor**: Engine pewarnaan sintaksis kode di dalam pembaca Markdown.
+- **Email Client Protocol (`mailto:`)**: Mekanisme pengiriman pesan kontak langsung dari pengunjung ke `kelvin.kanggara@gmail.com`.
+- **Search Engine Crawlers**: Indeksasi SEO otomatis berbasis `robots.txt` dan `sitemap.xml`.
+- **Social Embed Crawlers (Open Graph)**: Rendering pratinjau kartu tautan kaya pada Discord, Slack, dan platform media sosial.
 
 ---
 

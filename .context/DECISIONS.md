@@ -117,3 +117,63 @@ Dokumentasi keputusan arsitektur teknis yang bersifat _append-only_. Keputusan h
 - **Consequences**:
   - _Positif_: Waktu kompilasi produksi menurun drastis menjadi ~280ms (peningkatan kecepatan ~6x lipat), bebas peringatan deprecation (0 warnings), konfigurasi _future-proof_ siap untuk native config loading.
   - _Negatif_: Memerlukan kompatibilitas Node `>= 20.11` / Bun modern untuk dukungan native `import.meta.dirname`.
+
+---
+
+## ADR-008: Implementasi Halaman Kurasi Artikel Berdasarkan Tag (`/tags/:tag`) dan Normalisasi URL Absolut
+
+- **Status**: Accepted
+- **Date**: 2026-11-15
+- **Source**: GitHub Issue #36 (PR #54, PR #55) & Codebase evidence (`src/pages/Tags.tsx`, `src/Routers.tsx`, `run.sh`)
+- **Context**:
+  - Pengunjung membutuhkan kemampuan memfilter artikel berdasarkan topik/tag spesifik (misal: `/tags/Kubernetes`, `/tags/linux`).
+  - Sebelumnya, tautan tag pada kartu artikel mengarah ke rute `/tags/:tag` yang belum terdaftar di React Router, memicu halaman 404.
+  - URL thumbnail gambar di `public/index.json` awalnya bersifat relatif (`img/default.jpeg`), sehingga pada rute bersarang browser salah mencari `/tags/img/default.jpeg` (HTTP 404).
+- **Decision**:
+  - Membuat halaman baru `src/pages/Tags.tsx` yang mengekstrak tag via `useParams()`, melakukan filter _case-insensitive_ terhadap `index.json`, menyajikan topic badge selector interaktif dengan jumlah artikel, dan menampilkan Empty State bila tidak ada hasil.
+  - Mendaftarkan rute dinamis `tags/:tag` dan fallback `tags` di `src/Routers.tsx`.
+  - Mengubah generator `run.sh` dan normalisasi defensif pada `PostThumb.tsx` agar seluruh path gambar menggunakan leading slash absolut (`/img/...`).
+- **Consequences**:
+  - _Positif_: Pengalaman eksplorasi artikel meningkat drastis, SPA routing berjalan mulus tanpa reload halaman, aset gambar terbebas dari galat 404 pada rute bersarang.
+  - _Negatif_: Memerlukan sinkronisasi rute pada `404.html` GitHub Pages SPA handler agar direct deep-linking tetap berfungsi.
+
+---
+
+## ADR-009: Otomasi Verifikasi Deployment & Healthcheck Pasca-Deploy (`test.sh` & GitHub Actions)
+
+- **Status**: Accepted
+- **Date**: 2026-11-15
+- **Source**: GitHub Issue #29 (PR #56) & Codebase evidence (`test.sh`, `.github/workflows/deploy.yml`, `.github/workflows/check-deployment.yml`)
+- **Context**:
+  - Job `test` sebelumnya di `deploy.yml` mengalami kondisi _false positive_ (selalu hijau meskipun gagal) karena variabel `$base_url` kosong, runner terpisah tidak memiliki folder `dist/`, dan ketiadaan exit code kegagalan (`exit 1`).
+  - Propagasi CDN Cloudflare dan Fastly pada GitHub Pages memerlukan jeda beberapa detik setelah step deployment selesai.
+- **Decision**:
+  - Memodernisasi `test.sh` dengan mekanisme polling & retry (hingga 6 kali percobaan @ 10 detik interval).
+  - Memvalidasi HTTP status code 200 pada root page, bundel JavaScript/CSS live (mencocokkan hash build dengan HTML live), data `index.json`, SPA fallback `404.html`, dan thumbnail default.
+  - Menerapkan strict exit code (`exit 1` bila gagal) dan menghubungkan output `page_url` serta `asset_hash` dari job `deploy` ke job `test`.
+  - Menambahkan workflow mandiri `.github/workflows/check-deployment.yml` dengan trigger `workflow_dispatch` manual dan penjadwalan cron harian (`0 0 * * *`).
+- **Consequences**:
+  - _Positif_: Menghilangkan _false positive_, memberikan umpan balik status deployment yang akurat, memantau kesehatan situs publik secara berkala.
+  - _Negatif_: Pipeline deploy membutuhkan tambahan waktu ~15-30 detik untuk step healthcheck.
+
+---
+
+## ADR-010: Standardisasi SEO, Social Embeds, Sitemap XML Otomatis, dan Contact Form Mailto Handler
+
+- **Status**: Accepted
+- **Date**: 2026-11-15
+- **Source**: Developer request & PR #57 / commit follow-up
+- **Context**:
+  - Kartu preview tautan (link preview) di Discord dan media sosial tampak anonim karena ketiadaan `og:site_name`, `og:image`, `theme-color`, dan `description`.
+  - Berkas `sitemap.txt` warisan menggunakan format teks usang dan tidak dikenali optimal oleh mesin pencari Google/Bing.
+  - Direktori `public/` belum menampung aset statis root (`CNAME`, `ads.txt`, `robots.txt`, `.nojekyll`), sehingga berisiko tidak ter-bundle ke `dist/` oleh Vite.
+  - Formulir kontak sebelumnya menggunakan `action=""` tanpa event handler interaktif.
+- **Decision**:
+  - Menambahkan metadata SEO lengkap di `index.html` (`meta description`, `og:site_name`, `og:title`, `og:description`, `og:image`, `og:url`, `theme-color: #0ea5e9`, dan `twitter:card`).
+  - Menggantikan `sitemap.txt` dengan generator otomatis `sitemap.xml` di `run.sh` yang memetakan seluruh rute inti, kategori tag, dan artikel dengan atribut `<lastmod>`.
+  - Mengonfigurasi `robots.txt` dengan direktif perayapan standar (`Allow: /`) dan deklarasi `Sitemap: https://kanggara.my.id/sitemap.xml`.
+  - Mengintegrasikan sinkronisasi aset statis root (`CNAME`, `ads.txt`, `robots.txt`, `sitemap.xml`, `.nojekyll`) langsung ke dalam direktori `public/` via `run.sh`.
+  - Mengubah formulir `Contact.tsx` menjadi controlled input React dengan handler `onSubmit` yang secara otomatis menyusun tautan protokol `mailto:kelvin.kanggara@gmail.com`.
+- **Consequences**:
+  - _Positif_: Tampilan link embed di Discord/Slack tampil kaya dan profesional, perayapan mesin pencari terarah dan otomatis, formulir kontak dapat langsung digunakan tanpa dependensi backend eksternal, aset statis produksi di `dist/` terjamin lengkap.
+  - _Negatif_: Pengiriman pesan bergantung pada ketersediaan klien email lokal pengunjung.
